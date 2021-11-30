@@ -11,7 +11,7 @@
 * [Wireframe on Mobile](#wireframe-on-mobile-)
 * [Wireframes](#wireframes-%EF%B8%8F)
 * [API](#api-)
-* [SiteMap]()
+* [Sitemap](#sitemap-%EF%B8%8F)
 * [Dependencies](#dependencies-)
 * [Additional](#additional-)
 * [Contributors](#contributors-)
