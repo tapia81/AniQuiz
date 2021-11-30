@@ -1,4 +1,5 @@
 # AniQuiz
+![Landing Page Image](logos/AniQuiz_Draft_Logo.png)
 
 ## Table of contents 📰
 * [Description](#description)
@@ -56,13 +57,13 @@
 The mobile adaption of our website works similarily to the desktop application, with a few small changes. 
 
 #### The navigation bar will have a dropdown hamburger menu to showcase the different pages the app has
-![Mobile About Page](wireframes/mobile/mobile-02.jpg)
+![Mobile About Page](wireframes/mobile/Mobile_1.jpg)
 
 #### All game decision buttons have a vertical placement rather than horizontal for easy viewing on mobile. 
-![Mobile Vertical Placement](wireframes/mobile/mobile-05.jpg)
-![Mobile Vertical Placement](wireframes/mobile/mobile-11.jpg)
-![Mobile Vertical Placement](wireframes/mobile/mobile-08.jpg)
-
+![Mobile Vertical Placement](wireframes/mobile/Mobile_5.jpg)
+![Mobile Vertical Placement](wireframes/mobile/Mobile_6.jpg)
+![Mobile Vertical Placement](wireframes/mobile/Mobile_7.jpg)
+![Mobile Vertical Placement](wireframes/mobile/Mobile_8.jpg)
 
 
 ## Wireframes 🖊️
