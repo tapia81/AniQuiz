@@ -21,7 +21,7 @@
 * **Play the Game** (Our main option for accessing the quiz and playing the game) 
 
 ### How does AniQuiz Work? 
-*  The webpage provides an option between 3 aforementioned game modes: **Guess the anime series, Guess the manga series and Guess that anime quote**.  Once a category is selected, the player will have to select from the multiple choice answers displayed based on the question that was asked. 
+*  The webpage provides an option between 3 aforementioned game modes: **Guess the anime series, Guess the manga series and Who said that anime quote**.  Once a category is selected, the player will have to select from the multiple choice answers displayed based on the question that was asked. 
 *  If the user's chooses the **correct answer**, the button will change to green and a modal will appear congratulating the player on their correct answer. 
 *  If the user chooses the **wrong answer**, the button will change to red and a modal will appear revealing the correct answer. 
 *  Using the **Jikan API**, we will retrieve an image(s) for the "Guess that manga series" and "Guess that anime series" game modes with four possible choices on what the anime or manga could be. 
@@ -59,7 +59,8 @@ The mobile adaption of our website works similarily to the desktop application, 
 ![Mobile About Page](wireframes/mobile/mobile-02.jpg)
 
 #### All game decision buttons have a vertical placement rather than horizontal for easy viewing on mobile. 
-![Mobile Vertical Placement](wireframes/mobile/mobile-04.jpg)
+![Mobile Vertical Placement](wireframes/mobile/mobile-05.jpg)
+![Mobile Vertical Placement](wireframes/mobile/mobile-11.jpg)
 ![Mobile Vertical Placement](wireframes/mobile/mobile-08.jpg)
 
 
