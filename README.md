@@ -3,12 +3,12 @@
 ## Table of contents 📰
 * [Description](#description)
 * [Wireframe on Desktop](#wireframe-on-desktop-%EF%B8%8F)
-* [Wireframe on Mobile](#wireframe-on-mobile)
-* [Wireframes](#wireframes)
-* [API](#api)
-* [Dependencies](#dependencies)
-* [Additional](#additional)
-* [Contributors](#contributors)
+* [Wireframe on Mobile](#wireframe-on-mobile-)
+* [Wireframes](#wireframes-%EF%B8%8F)
+* [API](#api-)
+* [Dependencies](#dependencies-)
+* [Additional](#additional-)
+* [Contributors](#contributors-)
 
 ## Description📜
 
