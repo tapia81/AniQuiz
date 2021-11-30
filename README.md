@@ -49,8 +49,22 @@
 ![Correct Answer Page Image](wireframes/desktop/Wireframe_Project_Desktop-7.jpg)
 ![Modal Screen for Correct Answer](wireframes/desktop/Wireframe_Project_Desktop-8.jpg)
 
+## Wireframe on Mobile 🖥️
+
+The mobile adaption of our website works similarily to the desktop application, with a few small changes. 
+
+#### The navigation bar will have a dropdown hamburger menu to showcase the different pages the app has
+![Mobile About Page](wireframes/mobile/mobile-02.jpg)
+
+#### All game decision buttons have a vertical placement rather than horizontal for easy viewing on mobile. 
+![Mobile Vertical Placement](wireframes/mobile/mobile-04.jpg)
+![Mobile Vertical Placement](wireframes/mobile/mobile-08.jpg)
+
+
+
 ## Wireframes 🖊️
-#### If the wireframe file image is too big to read, right click on the image to open image in a new tab*
+
+#### If the wireframe file image is too big to read, on desktop, right click on the image to open image in a new tab*
 - [Desktop Wireframe](https://github.com/hydeiablakey/Final_Project_1/blob/main/wireframes/desktop/Wireframe_Project_Desktop-1.png)
 - [Mobile Wireframe](wireframes\mobile\Wireframe_Project_Mobile-1.png)
 - [Figma Wireframe File](https://www.figma.com/file/2NqUqIVdoXK33r0yTomNqV/Wireframe_Project_1?node-id=11%3A17)
