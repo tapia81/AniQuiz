@@ -11,6 +11,7 @@
 * [Wireframe on Mobile](#wireframe-on-mobile-)
 * [Wireframes](#wireframes-%EF%B8%8F)
 * [API](#api-)
+* [SiteMap]()
 * [Dependencies](#dependencies-)
 * [Additional](#additional-)
 * [Contributors](#contributors-)
@@ -75,6 +76,9 @@ The mobile adaption of our website works similarily to the desktop application, 
 - [Mobile Wireframe](wireframes/mobile)
 - [Figma Wireframe File](https://www.figma.com/file/2NqUqIVdoXK33r0yTomNqV/Wireframe_Project_1?node-id=11%3A17)
 
+## SiteMap 🗺️
+#### Here you can view a further breakdown on the path of each option on our website:
+- [Website Sitemap File](https://www.figma.com/file/eFgd65MWwDKykhmZlRqkKq/Sitemap?node-id=0%3A1)
 ## API 📝
 - [Jikan Api](https://jikan.moe/)
 - [AnimeChan Api](https://animechan.vercel.app/) 
@@ -84,7 +88,7 @@ The mobile adaption of our website works similarily to the desktop application, 
 - [Parcel](https://parceljs.org/)
 
 ## Additional 💭
-### Future functionality that we would like to have: 
+#### Future functionality that we would like to have: 
 - Points System (Whenever the user gets an answer right, they get one point) 
 - Display Points System (There would be a scoreboard detailing how many points in total they received)
 
