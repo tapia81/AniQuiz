@@ -82,19 +82,21 @@ The mobile adaption of our website works similarily to the desktop application, 
 
 ## Contributors 💻
 <div align="center">
-Connect with us! 
+Connect with the creators! 
 </div>
 <br>
 <div align="center">
-
+  <div>Created by Hydeia Blakey & Anthony Tapia</div>
 <span>
 <a href="https://github.com/hydeiablakey" target="_blank">
 <img alt="Github Logo" src="icons/hydeia_logo.jpg" /></a>
 </span>
 
+
 <span>
 <a href="https://github.com/tapia81" target="_blank">
 <img alt="Github Logo" src="icons/anthony_logo.jpg"  /></a>
 </span>
+
 
 </div>
