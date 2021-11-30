@@ -42,7 +42,7 @@
 
 #### The wrong answer will change to red after selecting then switch to the modal screen
 ![Wrong Answer Page Image](wireframes/desktop/Wireframe_Project_Desktop-5.jpg)
-![Modal Screen for Wrong Answer](wireframes/desktop/Wireframe_Project_Desktop-5.jpg)
+![Modal Screen for Wrong Answer](wireframes/desktop/Wireframe_Project_Desktop-6.jpg)
 
 #### The correct answer will change to green after selecting then switch to the modal screen
 ![Correct Answer Page Image](wireframes/desktop/Wireframe_Project_Desktop-7.jpg)
@@ -63,5 +63,5 @@ Future functionality that we would like to have:
 - Display Points System (There would be a scoreboard detailing how many points in total they received)
 
 ## Contributors:💻
-[![](icons/hydeia_logo.jpg)](https://github.com/hydeiablakey)
-[![](icons/anthony_logo.jpg)](https://github.com/tapia81)
+[![GithubLogo](icons/hydeia_logo.jpg)](https://github.com/hydeiablakey)
+[![GithubLogo](icons/anthony_logo.jpg)](https://github.com/tapia81)
