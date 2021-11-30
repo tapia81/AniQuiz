@@ -48,8 +48,9 @@
 ![Correct Answer Page Image](wireframes/landing4.png)
 
 ## Wireframes:
-- [Desktop Wireframe](wireframes/Wireframe_Project_Desktop.pdf)
-- [Mobile Wireframe](wireframes/Wireframe_Project_Mobile.pdf)
+- [Desktop Wireframe](wireframes\desktop\Wireframe_Project_Desktop-1.png)
+- [Mobile Wireframe](wireframes\mobile\Wireframe_Project_Mobile-1.png)
+- [Figma Wireframe File](https://www.figma.com/file/2NqUqIVdoXK33r0yTomNqV/Wireframe_Project_1?node-id=11%3A17)
 
 ## API: 
 - [Jikan Api](https://jikan.moe/)
