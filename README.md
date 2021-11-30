@@ -43,17 +43,17 @@
 ![Landing Page Image](wireframes/desktop/Desktop-01.jpg)
 
 #### The start game page will allow the user to choose from 3 possible game modes
-![Game Mode Page Image](wireframes/desktop/Desktop-10.jpg)
+![Game Mode Page Image](wireframes/desktop/Desktop-03.jpg)
 
-#### If you click "Guess that anime series" for example, It will display a a random anime image and 4 possible answer choices for selection
-![Category Page Image](wireframes/desktop/Desktop-03.png)
+#### If you click "Who said that anime quote?" for example, It will display a a random anime quote and 4 possible answer choices for selection
+![Category Page Image](wireframes/desktop/Desktop-04.jpg)
 
 #### The wrong answer will change to red after selecting then switch to the modal screen
-![Wrong Answer Page Image](wireframes/desktop/Desktop-04.jpg)
+![Wrong Answer Page Image](wireframes/desktop/Desktop-05.jpg)
 ![Modal Screen for Wrong Answer](wireframes/desktop/Desktop-06.jpg)
 
 #### The correct answer will change to green after selecting then switch to the modal screen
-![Correct Answer Page Image](wireframes/desktop/Desktop-05.jpg)
+![Correct Answer Page Image](wireframes/desktop/Desktop-07.jpg)
 ![Modal Screen for Correct Answer](wireframes/desktop/Desktop-08.jpg)
 
 ## Wireframe on Mobile 📱
