@@ -1,5 +1,9 @@
 # AniQuiz
-![Landing Page Image](logos/AniQuiz_Short_Logo.png)
+<div align="center">
+<img alt="Github Logo" src="logos/AniQuiz_Short_Logo.png" />
+</div>
+
+
 
 ## Table of contents 📰
 * [Description](#description)
