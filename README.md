@@ -49,8 +49,8 @@
 ![Modal Screen for Correct Answer](wireframes/desktop/Wireframe_Project_Desktop-8.jpg)
 
 ## Wireframes:🖊️
-- [Desktop Wireframe](https://github.com/hydeiablakey/Final_Project_1/blob/main/wireframes/desktop/Wireframe_Project_Desktop-1.png)
-- [Mobile Wireframe](wireframes\mobile\Wireframe_Project_Mobile-1.png)
+- [Desktop Wireframe](https://github.com/hydeiablakey/Final_Project_1/blob/main/wireframes/desktop)
+- [Mobile Wireframe](https://github.com/hydeiablakey/Final_Project_1/tree/main/wireframes/mobile)
 - [Figma Wireframe File](https://www.figma.com/file/2NqUqIVdoXK33r0yTomNqV/Wireframe_Project_1?node-id=11%3A17)
 
 ## API: 📝
