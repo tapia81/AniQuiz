@@ -33,21 +33,21 @@
 ## Wireframe on Desktop 🖥️
 
 #### The page will display an anime background and a navigation bar with links to the about us, learning about the game, and starting the game pages. 
-![Landing Page Image](wireframes/desktop/Wireframe_Project_Desktop-About.jpg)
+![Landing Page Image](wireframes/desktop/Desktop-01.jpg)
 
 #### The start game page will allow the user to choose from 3 possible game modes
-![Game Mode Page Image](wireframes/desktop/Wireframe_Project_Desktop-1.jpg)
+![Game Mode Page Image](wireframes/desktop/Desktop-10.jpg)
 
-#### If you click "Guess that anime quote" for example, It will display a random quote and 4 possible answer choices for selection
-![Category Page Image](wireframes/desktop/Wireframe_Project_Desktop-2.jpg)
+#### If you click "Guess that anime series" for example, It will display a a random anime image and 4 possible answer choices for selection
+![Category Page Image](wireframes/desktop/Desktop-03.png)
 
 #### The wrong answer will change to red after selecting then switch to the modal screen
-![Wrong Answer Page Image](wireframes/desktop/Wireframe_Project_Desktop-5.jpg)
-![Modal Screen for Wrong Answer](wireframes/desktop/Wireframe_Project_Desktop-6.jpg)
+![Wrong Answer Page Image](wireframes/desktop/Desktop-04.jpg)
+![Modal Screen for Wrong Answer](wireframes/desktop/Desktop-06.jpg)
 
 #### The correct answer will change to green after selecting then switch to the modal screen
-![Correct Answer Page Image](wireframes/desktop/Wireframe_Project_Desktop-7.jpg)
-![Modal Screen for Correct Answer](wireframes/desktop/Wireframe_Project_Desktop-8.jpg)
+![Correct Answer Page Image](wireframes/desktop/Desktop-05.jpg)
+![Modal Screen for Correct Answer](wireframes/desktop/Desktop-08.jpg)
 
 ## Wireframe on Mobile 🖥️
 
@@ -63,10 +63,8 @@ The mobile adaption of our website works similarily to the desktop application, 
 
 
 ## Wireframes 🖊️
-
-#### If the wireframe file image is too big to read, on desktop, right click on the image to open image in a new tab*
-- [Desktop Wireframe](https://github.com/hydeiablakey/Final_Project_1/blob/main/wireframes/desktop/Wireframe_Project_Desktop-1.png)
-- [Mobile Wireframe](wireframes/mobile/Wireframe_Project_Mobile-1.png)
+- [Desktop Wireframe](wireframes/desktop)
+- [Mobile Wireframe](wireframes/mobile)
 - [Figma Wireframe File](https://www.figma.com/file/2NqUqIVdoXK33r0yTomNqV/Wireframe_Project_1?node-id=11%3A17)
 
 ## API 📝
