@@ -72,6 +72,7 @@ The mobile adaption of our website works similarily to the desktop application, 
 
 
 ## Wireframes 🖊️
+#### For images of our wireframe check out our wireframe files below: 
 - [Desktop Wireframe](wireframes/desktop)
 - [Mobile Wireframe](wireframes/mobile)
 - [Figma Wireframe File](https://www.figma.com/file/2NqUqIVdoXK33r0yTomNqV/Wireframe_Project_1?node-id=11%3A17)
