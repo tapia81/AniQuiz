@@ -32,19 +32,23 @@
 
 * The purpose of AniQuiz is to test and improve one's knowledge on anime and manga. It's meant to be a fun way to quiz yourself on anime and manga related content. 
 
-### Landing Page
+### Landing Page on Desktop
 
-#### The page will display an anime background and 3 buttons for an about us, learning about the game, and starting the game.
-![Landing Page Image](wireframes/landing.png)
+#### The page will display an anime background and a navigation bar with links to the about us, learning about the game, and starting the game pages. 
+![Landing Page Image](wireframes/desktop/Wireframe_Project_Desktop-About.jpg)
+
+#### The start game page will allow the user to choose from 3 possible modes
+![Game Mode Page Image](wireframes/desktop/Wireframe_Project_Desktop-1.jpg)
 
 #### The start game will display an image or quote and four multiple answers
-![Category Page Image](wireframes/landing2.png)
+![Category Page Image](wireframes/desktop/Wireframe_Project_Desktop-2.jpg)
 
 #### The wrong answer will change to red after selecting then switch to the modal screen
-![Wrong Answer Page Image](wireframes/landing3.png)
+![Wrong Answer Page Image](wireframes/desktop/Wireframe_Project_Desktop-5.jpg)
+
 
 #### The correct answer will change to green after selecting then switch to the modal screen
-![Correct Answer Page Image](wireframes/landing4.png)
+![Correct Answer Page Image](wireframes\desktop\Wireframe_Project_Desktop-7.jpg)
 
 ## Wireframes:
 - [Desktop Wireframe](https://github.com/hydeiablakey/Final_Project_1/blob/main/wireframes/desktop/Wireframe_Project_Desktop-1.png)
