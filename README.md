@@ -49,6 +49,7 @@
 ![Modal Screen for Correct Answer](wireframes/desktop/Wireframe_Project_Desktop-8.jpg)
 
 ## Wireframes:🖊️
+#### If the wireframe file image is too big to read, right click on the image to open image in a new tab*
 - [Desktop Wireframe](https://github.com/hydeiablakey/Final_Project_1/blob/main/wireframes/desktop/Wireframe_Project_Desktop-1.png)
 - [Mobile Wireframe](wireframes\mobile\Wireframe_Project_Mobile-1.png)
 - [Figma Wireframe File](https://www.figma.com/file/2NqUqIVdoXK33r0yTomNqV/Wireframe_Project_1?node-id=11%3A17)
