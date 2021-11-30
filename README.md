@@ -63,7 +63,15 @@ Future functionality that we would like to have:
 - Display Points System (There would be a scoreboard detailing how many points in total they received)
 
 ## Contributors:💻
+
 <div align="center">
-[![GithubLogo](icons/hydeia_logo.jpg)](https://github.com/hydeiablakey)
-[![GithubLogo](icons/anthony_logo.jpg)](https://github.com/tapia81)
+<span>
+<a href="https://github.com/hydeiablakey" target="_blank">
+<img alt="Github Logo" src="icons/hydeia_logo.jpg" /></a>
+</span>
+
+<span>
+<a href="https://github.com/tapia81" target="_blank">
+<img alt="Github Logo" src="icons/anthony_logo.jpg"  /></a>
+</span>
 </div>
