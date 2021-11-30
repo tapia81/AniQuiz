@@ -2,6 +2,8 @@
 
 ## Table of contents 📰
 * [Description](#description)
+* [Wireframe on Desktop](#wireframe-on-desktop-%EF%B8%8F)
+* [Wireframe on Mobile](#wireframe-on-mobile)
 * [Wireframes](#wireframes)
 * [API](#api)
 * [Dependencies](#dependencies)
@@ -49,7 +51,7 @@
 ![Correct Answer Page Image](wireframes/desktop/Desktop-05.jpg)
 ![Modal Screen for Correct Answer](wireframes/desktop/Desktop-08.jpg)
 
-## Wireframe on Mobile 🖥️
+## Wireframe on Mobile 📱
 
 The mobile adaption of our website works similarily to the desktop application, with a few small changes. 
 
