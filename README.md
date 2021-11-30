@@ -4,6 +4,7 @@
 * [Description](#description)
 * [Wireframes](#wireframes)
 * [API](#api)
+* [Dependencies](#dependencies)
 * [Additional](#additional)
 * [Contributors](#contributors)
 
@@ -57,6 +58,10 @@
 ## API: 📝
 - [Jikan Api](https://jikan.moe/)
 - [AnimeChan Api](https://animechan.vercel.app/) 
+
+## Dependencies 
+- [Axios](https://github.com/axios/axios)
+- [Parcel](https://parceljs.org/)
 
 ## Additional: 💭
 ### Future functionality that we would like to have: 
