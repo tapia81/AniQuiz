@@ -1,5 +1,5 @@
 # AniQuiz
-![Landing Page Image](logos/AniQuiz_Draft_Logo.png)
+![Landing Page Image](logos/AniQuiz_Short_Logo.png)
 
 ## Table of contents 📰
 * [Description](#description)
