@@ -1,56 +1,79 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
 :root {
-	--white: #ffffff;
-	--cultured: #f5f3f4;
-	--lightGray: #d3d3d3;
-	--silverChalice: #b1a7a6;
-	--imperialRed: #e5383b;
-	--carnelian: #ba181b;
-	--rubyRed: #a4161a;
-	--bloodRed: #660708;
-	--eerieBlack: #161a1d;
-	--richBlack: #0b090a;
+    --white: #FFFFFF; 
+    --cultured: #F5F3F4; 
+    --lightGray: #D3D3D3; 
+    --silverChalice: #B1A7A6; 
+    --imperialRed: #E5383B; 
+    --carnelian: #BA181B; 
+    --rubyRed: #A4161A;
+    --bloodRed: #660708; 
+    --eerieBlack: #161A1D; 
+    --richBlack: #0B090A; 
+
 }
 
-html {
-	background-color: #f6bd60;
-}
-
-.navbar {
-	/* border: solid;
-	border-color: var(--richBlack);
-	border-width: 10px; */
-	background-color: var(--cultured);
-	width: 100vw;
-	height: 13vh;
-	display: flex;
-	flex-direction: row;
-	font-size: 30px;
-}
-
-.navbar-item img {
-	min-height: 100px;
-	width: 300px;
+html, body {
+    width: 100%; 
+    background-color: var(--lightGray);
 }
 
 .navbar-start {
-	max-width: 55vw;
-	flex-grow: 1;
-	justify-content: center;
+    flex-grow: 1;
+    justify-content: center;
+    color: var(--richBlack);
 }
 
-.body-content {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 3%;
+.navbar {
+   background-color: var(--white);
+   overflow: hidden;
 }
+
+.mainContainer {
+    margin: 40px;
+}
+
+.aboutTitle {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.aboutPara {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid;
+}
+
+
+.navbar-item:hover {
+    background-color: var(--white) !important;
+    color: var(--richBlack) !important;
+
+
+}
+
+.navbar-burger:hover {
+    background-color: var(--white) !important;
+}
+
+
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 15px 20px;
+    margin: 0rem 2rem;
+
+  }
+
+.navbar-item img {
+	max-height: none;
+}
+
+/*
+How to play styling
+
+*/
 
 .game-rules-box {
 	height: 80vh;
@@ -70,8 +93,9 @@ html {
 	width: 40vw;
 }
 .game-rules-content h2 {
-	font-size: 70px;
+	font-size: 5vw;
 }
+
 
 .slideshow-box {
 	height: 80vh;
@@ -90,30 +114,10 @@ html {
 .slideshow-image:hover {
 	cursor: pointer;
 }
-
-.navbar-items {
-	color: black;
-	text-transform: uppercase;
-	text-decoration: none;
-	letter-spacing: 0.15em;
-
-	display: inline-block;
-	padding: 15px 20px;
-	position: relative;
-}
-.navbar-items:after {
-	background: none repeat scroll 0 0 transparent;
-	bottom: 30px;
-	content: "";
-	display: block;
-	height: 2px;
-	left: 50%;
-	position: absolute;
-	background: black;
-	transition: width 0.3s ease 0s, left 0.3s ease 0s;
-	width: 0;
-}
-.navbar-items:hover:after {
-	width: 100%;
-	left: 0;
+.body-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 3%;
 }
