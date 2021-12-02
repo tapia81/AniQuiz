@@ -1,5 +1,7 @@
 
 import {guessAnimePage, guessQuotePage, guessMangaPage} from '/redirect.js'
+import axios from 'axios'; 
+
 
 
 $(document).ready(function() {
@@ -11,18 +13,38 @@ $(document).ready(function() {
 	});
 });
 
-let currentImage = document.getElementsByClassName('slideshow-image');
-let imageBox = document.getElementsByClassName('slideshow-box');
-let i = 3;
-imageBox[0].addEventListener('click', function() {
-	i += 1;
-	if (i < 10) {
-		currentImage[0].src = `wireframes/desktop/Desktop-0${i}.jpg`;
-	} else if (i == 10) {
-		currentImage[0].src = `wireframes/desktop/Desktop-${i}.jpg`;
-	} else {
-		return (i = 2);
-	}
-});
+// let currentImage = document.getElementsByClassName('slideshow-image');
+// let imageBox = document.getElementsByClassName('slideshow-box');
+// let i = 3;
+// imageBox[0].addEventListener('click', function() {
+// 	i += 1;
+// 	if (i < 10) {
+// 		currentImage[0].src = `wireframes/desktop/Desktop-0${i}.jpg`;
+// 	} else if (i == 10) {
+// 		currentImage[0].src = `wireframes/desktop/Desktop-${i}.jpg`;
+// 	} else {
+// 		return (i = 2);
+// 	}
+// });
 
-guessAnimePage(); 
+
+
+/*
+guessthatquote.html 
+
+*/
+
+let requestQuotes = 'https://animechan.vercel.app/api/random';
+
+const getQuote = async () => {
+	try {
+		const response = await axios.get(`https://animechan.vercel.app/api/random`)
+        console.log(`Quote Data: ${response.data.quote}`); 
+        // return response.data.quote
+
+	} catch (err) {
+		console.log(err)
+	}
+}
+
+getQuote(); 
