@@ -32,11 +32,18 @@ window.addEventListener('load',()=>{
         guessMangaBtn.addEventListener("click", guessMangaPage); 
     })
 
+
+    //use to save the character names from the quote API
+
+    let quoteData = []; 
+
+
     const getQuote = async () => {
 	try {
 		const response = await axios.get(`https://animechan.vercel.app/api/random`)
-        // console.log(`Quote Data: ${response.data.quote}`); 
-        return response.data.quote
+                // console.log(`Quote Data: ${response.data.quote}`); 
+                console.log(response); 
+                return response.data
 
 	} catch (err) {
 		console.log(err)
@@ -45,11 +52,28 @@ window.addEventListener('load',()=>{
 
 
         const createQuote = async () => {
+
         const quoteElement = await getQuote();
         const parentP = document.getElementById('quoteAPI'); 
         const paraEle = document.createElement('p'); 
-        paraEle.append(quoteElement); 
-        parentP.appendChild(paraEle); 
+        const hintEle = document.createElement('p'); 
+        paraEle.append(`${quoteElement.quote}.` ); 
+        hintEle.append(`*Hint: this quote is from the anime ${quoteElement.anime}`)
+
+        quoteData.push(quoteElement.character); 
+        console.log('quoteData: ' + quoteData)
+
+        choice1.innerHTML = `${quoteData}`
+
+        parentP.appendChild(paraEle)
+        paraEle.appendChild(hintEle); 
+
+
     }
 
+        let choice1 = document.getElementById('choice1'); 
+
+
     createQuote(); 
+ 
+
