@@ -1,3 +1,7 @@
+
+import {guessAnimePage, guessQuotePage, guessMangaPage} from '/redirect.js'
+
+
 $(document).ready(function() {
 	// Check for click events on the navbar burger icon
 	$('.navbar-burger').click(function() {
@@ -20,3 +24,5 @@ imageBox[0].addEventListener('click', function() {
 		return (i = 2);
 	}
 });
+
+guessAnimePage(); 

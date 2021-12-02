@@ -17,6 +17,13 @@ html, body {
     background-color: var(--lightGray);
 }
 
+/* 
+
+Navbar styling 
+
+*/ 
+
+
 .navbar-start {
     flex-grow: 1;
     justify-content: center;
@@ -26,24 +33,12 @@ html, body {
 .navbar {
    background-color: var(--white);
    overflow: hidden;
+   border: 1px solid;
 }
 
 .mainContainer {
     margin: 40px;
 }
-
-.aboutTitle {
-    font-size: 3em;
-    font-weight: bold;
-}
-
-.aboutPara {
-    margin-top: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    border: 3px solid;
-}
-
 
 .navbar-item:hover {
     background-color: var(--white) !important;
@@ -57,18 +52,64 @@ html, body {
 }
 
 
-  a {
-    color: #fff;
+.navbar-item, .navbar-link {
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    padding: 15px 20px;
-    margin: 0rem 2rem;
 
   }
 
 .navbar-item img {
 	max-height: none;
 }
+
+/*
+
+about/index.html styling
+
+*/
+
+
+.aboutTitle {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.aboutPara {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid;
+    padding: 5px 20px 5px 20px;
+}
+
+.secondaryTitle {
+    font-size: 2em; 
+    font-style:oblique;
+    
+}
+
+.contactSection {
+    display: flex;
+
+}
+
+.logoStyle {
+    margin: 5px;
+    border: 2px solid black;
+    
+}
+
+.resize {
+    width: 100px;
+    height: auto;
+}
+
+.resize {
+    width: auto; 
+    height: 100px;
+
+}
+
 
 /*
 How to play styling
@@ -120,4 +161,23 @@ How to play styling
 	justify-content: center;
 	align-items: center;
 	gap: 3%;
+}
+
+/*
+Start Game
+*/ 
+
+.gameTitle {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.centerColumn {
+    text-align: center;
+}
+
+.modeBtn {
+    margin-top: 20px;
+    
 }
