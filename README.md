@@ -87,6 +87,7 @@ The mobile adaption of our website works similarily to the desktop application, 
 ## Dependencies 📇
 - [Axios](https://github.com/axios/axios)
 - [Parcel](https://parceljs.org/)
+- [Bulma](https://bulma.io/)
 
 ## Additional 💭
 #### Future functionality that we would like to have: 
