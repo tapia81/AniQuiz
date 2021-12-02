@@ -9,7 +9,7 @@ export const guessAnimePage = () => {
 }
 
 export const guessQuotePage = () => {
-        location.href="game/guess_that_manga.html"
+        location.href="game/guess_that_quote.html"
         
 }
 
