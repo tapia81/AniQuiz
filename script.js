@@ -1,4 +1,6 @@
-import {guessAnimePage, guessQuotePage, guessMangaPage} from '/game.js'
+import {guessAnimePage} from '/components/animePage.js'
+import {guessQuotePage} from '/components/quotePage.js'
+import {guessMangaPage } from '/components/mangaPage.js'
 
 
 
