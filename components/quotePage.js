@@ -21,6 +21,8 @@ let option3 = document.getElementById('choice3');
 let option4 = document.getElementById('choice4');
 let buttonDiv = document.getElementsByClassName('column');
 let options = buttonDiv[2].getElementsByClassName('modeBtn');
+let btns = buttonDiv[2].getElementsByTagName('button');
+
 const getQuoteData = async () => {
 	try {
 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
@@ -75,6 +77,12 @@ const createQuote = async () => {
 	const paraEle = document.createElement('p');
 	const hintEle = document.createElement('p');
 
+	// options.addEventListener('click', function() {
+	// 	if (option1.textContent == quoteElement.character) {
+	// 		console.log('hi');
+	// 	}
+	// });
+
 	//appending each quote to the who said that quote page.
 	paraEle.append(`${quoteElement.quote}.`);
 	hintEle.append(`*Hint: this quote is from the anime ${quoteElement.anime}`);
@@ -95,6 +103,7 @@ const createQuote = async () => {
 	//issue with this is that it doesn't account for if a number repeats
 	parentP.appendChild(paraEle);
 	paraEle.appendChild(hintEle);
+
 	let arr = [];
 
 	randomGen = () => {
@@ -104,22 +113,27 @@ const createQuote = async () => {
 		}
 		return arr;
 	};
+	console.log(arr);
 
 	randomGen();
+
+	checkAnswer = (i) => {
+		console.log(i);
+		if (options[i].textContent == quoteElement.character) {
+			options[i].style.backgroundColor = 'green';
+			options[i].style.color = 'white';
+		} else {
+			options[i].style.backgroundColor = 'red';
+			options[i].style.color = 'white';
+		}
+	};
 
 	let randomNumArr = arr;
 	for (let i = 0; i <= options.length; i++) {
 		options[i].textContent = `${quoteData[randomNumArr[i]]}`;
 		options[i].textContent = `${quoteData[randomNumArr[i]]}`;
-		options[i].addEventListener('click', function() {
-			if (options[i].textContent == quoteElement.character) {
-				options[i].style.backgroundColor = 'green';
-				options[i].style.color = 'white';
-			} else if (options[i].textContent !== quoteElement.character) {
-				options[i].style.backgroundColor = 'red';
-				options[i].style.color = 'white';
-			}
-		});
+
+		options[i].addEventListener('click', checkAnswer(i));
 	}
 };
 
