@@ -1,12 +1,14 @@
 {
-  "name": "Final_Project_1",
+  "name": "AniQuiz",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:hydeiablakey/Final_Project_1.git",
-  "author": "Hydeia <blakeyhydeia@gmail.com>",
+  "repository": "https://github.com/hydeiablakey/AniQuiz.git",
+  "author": "anthony <tapiaanthony81@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.24.0"
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "react-scripts": "^4.0.3"
   },
   "devDependencies": {
     "parcel": "^2.0.1"
