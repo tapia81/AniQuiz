@@ -128,7 +128,6 @@ const createQuote = async () => {
 	let randomNumArr = arr;
 	for (let i = 0; i <= options.length; i++) {
 		options[i].textContent = `${quoteData[randomNumArr[i]]}`;
-		options[i].textContent = `${quoteData[randomNumArr[i]]}`;
 		options[i].addEventListener('click', checkAnswer(i));
 	}
 };
