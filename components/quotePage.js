@@ -15,10 +15,7 @@ guessQuoteBtn && guessQuoteBtn.addEventListener('click', guessQuotePage);
 let quoteData = [];
 
 //setting variable names to each multiple choice answer button
-let option1 = document.getElementById('choice1');
-let option2 = document.getElementById('choice2');
-let option3 = document.getElementById('choice3');
-let option4 = document.getElementById('choice4');
+
 let buttonDiv = document.getElementsByClassName('column');
 let options = buttonDiv[2].getElementsByClassName('modeBtn');
 let btns = buttonDiv[2].getElementsByTagName('button');
@@ -132,7 +129,6 @@ const createQuote = async () => {
 	for (let i = 0; i <= options.length; i++) {
 		options[i].textContent = `${quoteData[randomNumArr[i]]}`;
 		options[i].textContent = `${quoteData[randomNumArr[i]]}`;
-
 		options[i].addEventListener('click', checkAnswer(i));
 	}
 };
