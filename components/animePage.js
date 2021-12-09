@@ -36,15 +36,12 @@ const getAnimeImg = async () => {
 		console.log(err);
 	}
 };
-
-// getAnimeImg();
-
 const createAnimeGame = async () => {
 	const imgData = await getAnimeImg();
 
 	//appending the image on the page
 
-	const parentDiv = document.getElementById('animeColumn');
+	const parentDiv = document.getElementById('picture');
 	const animeImg = document.createElement('img');
 
 	//Anime response photo & answer from photo
@@ -75,6 +72,35 @@ const createAnimeGame = async () => {
 	for (let i = 0; i < options.length; i++) {
 		options[i].textContent = `${imgData.top[newArr[randomNumArr[i]]].title}`;
 	}
+
+	//next page functionality* 
+
 };
 
 createAnimeGame();
+
+const clearImg = () => {
+    
+
+	const parentDiv = document.getElementById('picture');
+
+    while (parentDiv.firstChild) {
+        parentDiv.firstChild.remove();
+    }
+}
+
+function reload() {
+    reload = location.reload();
+}
+
+let nextPageBtn = document.getElementsByClassName('nextQuestion'); 
+console.log(nextPageBtn)
+nextPageBtn[0].addEventListener('click', function() {
+	reload(); 
+	clearImg();
+	createAnimeGame(); 
+	
+	console.log('this is the next page button being clicked. ')
+
+	
+})
