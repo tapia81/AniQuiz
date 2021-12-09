@@ -100,7 +100,7 @@ nextPageBtn[0].addEventListener('click', function() {
 	clearImg();
 	createAnimeGame(); 
 	
-	console.log('this is the next page button being clicked. ')
+	// console.log('this is the next page button being clicked. ')
 
 	
 })
