@@ -1,123 +1,123 @@
-// import quotePage from '/game/guess_that_quote.html';
-// import axios from 'axios';
+import quotePage from '/game/guess_that_quote.html';
+import axios from 'axios';
 
-// const guessQuoteBtn = document.getElementById('guessQuote');
+const guessQuoteBtn = document.getElementById('guessQuote');
 
-// export const guessQuotePage = () => {
-// 	window.location.href = `${quotePage}`;
-// };
+export const guessQuotePage = () => {
+	window.location.href = `${quotePage}`;
+};
 
-// guessQuoteBtn && guessQuoteBtn.addEventListener('click', guessQuotePage);
+guessQuoteBtn && guessQuoteBtn.addEventListener('click', guessQuotePage);
 
-// // Quote Page Functionality (guess_that_quote.html)
+// Quote Page Functionality (guess_that_quote.html)
 
-// //An array to hold character data for the multiple choice buttons
-// let quoteData = [];
+//An array to hold character data for the multiple choice buttons
+let quoteData = [];
 
-// //setting variable names to each multiple choice answer button
+//setting variable names to each multiple choice answer button
 
-// let buttonDiv = document.getElementsByClassName('column');
-// let options = buttonDiv[2].getElementsByClassName('modeBtn');
-// let btns = buttonDiv[2].getElementsByTagName('button');
+let buttonDiv = document.getElementsByClassName('column');
+let options = buttonDiv[2].getElementsByClassName('modeBtn');
+let btns = buttonDiv[2].getElementsByTagName('button');
 
-// const getQuoteData = async () => {
-// 	try {
-// 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
-// 		// console.log(`Quote Data: ${response.data.quote}`);
-// 		console.log(response);
-// 		return response.data;
-// 	} catch (err) {
-// 		console.log(err);
-// 	}
-// };
+const getQuoteData = async () => {
+	try {
+		const response = await axios.get(`https://animechan.vercel.app/api/random`);
+		// console.log(`Quote Data: ${response.data.quote}`);
+		console.log(response);
+		return response.data;
+	} catch (err) {
+		console.log(err);
+	}
+};
 
-// const getChoice2 = async () => {
-// 	try {
-// 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
+const getChoice2 = async () => {
+	try {
+		const response = await axios.get(`https://animechan.vercel.app/api/random`);
 
-// 		console.log(response);
-// 		return response.data.character;
-// 	} catch (err) {
-// 		console.log(err);
-// 	}
-// };
+		console.log(response);
+		return response.data.character;
+	} catch (err) {
+		console.log(err);
+	}
+};
 
-// const getChoice3 = async () => {
-// 	try {
-// 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
+const getChoice3 = async () => {
+	try {
+		const response = await axios.get(`https://animechan.vercel.app/api/random`);
 
-// 		console.log(response);
-// 		return response.data.character;
-// 	} catch (err) {
-// 		console.log(err);
-// 	}
-// };
+		console.log(response);
+		return response.data.character;
+	} catch (err) {
+		console.log(err);
+	}
+};
 
-// const getChoice4 = async () => {
-// 	try {
-// 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
+const getChoice4 = async () => {
+	try {
+		const response = await axios.get(`https://animechan.vercel.app/api/random`);
 	
-// 		console.log(response);
-// 		return response.data.character;
-// 	} catch (err) {
-// 		console.log(err);
-// 	}
-// };
+		console.log(response);
+		return response.data.character;
+	} catch (err) {
+		console.log(err);
+	}
+};
 
-// const createQuote = async () => {
-// 	const quoteElement = await getQuoteData();
-// 	const choice2 = await getChoice2();
-// 	const choice3 = await getChoice3();
-// 	const choice4 = await getChoice4();
+const createQuote = async () => {
+	const quoteElement = await getQuoteData();
+	const choice2 = await getChoice2();
+	const choice3 = await getChoice3();
+	const choice4 = await getChoice4();
 
-// 	const parentP = document.getElementById('quoteAPI');
-// 	const paraEle = document.createElement('p');
-// 	const hintEle = document.createElement('p');
+	const parentP = document.getElementById('quoteAPI');
+	const paraEle = document.createElement('p');
+	const hintEle = document.createElement('p');
 
-// 	//appending each quote to the who said that quote page.
-// 	paraEle.append(`${quoteElement.quote}.`);
-// 	hintEle.append(`*Hint: this quote is from the anime ${quoteElement.anime}`);
+	//appending each quote to the who said that quote page.
+	paraEle.append(`${quoteElement.quote}.`);
+	hintEle.append(`*Hint: this quote is from the anime ${quoteElement.anime}`);
 
-// 	//pushing the quote character data to quotedata array
-// 	quoteData.push(quoteElement.character, choice2, choice3, choice4);
+	//pushing the quote character data to quotedata array
+	quoteData.push(quoteElement.character, choice2, choice3, choice4);
 
-// 	//logging the data
-// 	console.log('quote: ' + quoteElement.quote);
-// 	console.log('quote character data: ' + quoteData);
+	//logging the data
+	console.log('quote: ' + quoteElement.quote);
+	console.log('quote character data: ' + quoteData);
 
 
-// 	parentP.appendChild(paraEle);
-// 	paraEle.appendChild(hintEle);
+	parentP.appendChild(paraEle);
+	paraEle.appendChild(hintEle);
 
-// 	let arr = [];
+	let arr = [];
 
-// 	randomGen = () => {
-// 		for (let choices = [ 0, 1, 2, 3 ], i = options.length; i--; ) {
-// 			let randomNum = choices.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
-// 			arr.push(randomNum);
-// 		}
-// 		return arr;
-// 	};
-// 	console.log(arr);
+	randomGen = () => {
+		for (let choices = [ 0, 1, 2, 3 ], i = options.length; i--; ) {
+			let randomNum = choices.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
+			arr.push(randomNum);
+		}
+		return arr;
+	};
+	console.log(arr);
 
-// 	randomGen();
+	randomGen();
 
-// 	checkAnswer = (i) => {
-// 		console.log(i);
-// 		if (options[i].textContent == quoteElement.character) {
-// 			options[i].style.backgroundColor = 'green';
-// 			options[i].style.color = 'white';
-// 		} else {
-// 			options[i].style.backgroundColor = 'red';
-// 			options[i].style.color = 'white';
-// 		}
-// 	};
+	checkAnswer = (i) => {
+		console.log(i);
+		if (options[i].textContent == quoteElement.character) {
+			options[i].style.backgroundColor = 'green';
+			options[i].style.color = 'white';
+		} else {
+			options[i].style.backgroundColor = 'red';
+			options[i].style.color = 'white';
+		}
+	};
 
-// 	let randomNumArr = arr;
-// 	for (let i = 0; i <= options.length; i++) {
-// 		options[i].textContent = `${quoteData[randomNumArr[i]]}`;
-// 		options[i].addEventListener('click', checkAnswer(i));
-// 	}
-// };
+	let randomNumArr = arr;
+	for (let i = 0; i <= options.length; i++) {
+		options[i].textContent = `${quoteData[randomNumArr[i]]}`;
+		options[i].addEventListener('click', checkAnswer(i));
+	}
+};
 
-// createQuote();
+createQuote();
