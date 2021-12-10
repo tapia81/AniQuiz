@@ -13,6 +13,7 @@ guessAnimeBtn && guessAnimeBtn.addEventListener('click', guessAnimePage);
 
 let buttonDiv = document.getElementsByClassName('column');
 let options = buttonDiv[2].getElementsByClassName('modeBtn');
+let mainMenuBtn = buttonDiv[3].getElementsByClassName('modeBtn');
 
 let rand = Math.floor(Math.random() * 51);
 let rand2 = Math.floor(Math.random() * 51);
@@ -74,6 +75,24 @@ const createAnimeGame = async () => {
 
 	for (let i = 0; i < options.length; i++) {
 		options[i].textContent = `${imgData.top[newArr[randomNumArr[i]]].title}`;
+	}
+
+	for (let i = 0; i < options.length; i++) {
+		options[i].addEventListener('click', function(place) {
+			if (options[i].textContent == imgData.top[rand].title) {
+				options[i].style.backgroundColor = 'green';
+				options[i].style.color = 'white';
+				for (let j = 0; j < options.length; j++) {
+					options[j].disabled = true;
+				}
+			} else {
+				options[i].style.backgroundColor = 'red';
+				options[i].style.color = 'white';
+				for (let j = 0; j < options.length; j++) {
+					options[j].disabled = true;
+				}
+			}
+		});
 	}
 };
 
