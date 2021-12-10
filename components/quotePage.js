@@ -17,12 +17,10 @@ guessQuoteBtn && guessQuoteBtn.addEventListener('click', guessQuotePage);
 
 let buttonDiv = document.getElementsByClassName('column');
 let options = buttonDiv[2].getElementsByClassName('modeBtn');
-// let mainMenuBtn = buttonDiv[3].getElementsByClassName('modeBtn');
 
 const getQuoteData = async () => {
 	try {
 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
-		// console.log(`Quote Data: ${response.data.quote}`);
 		console.log(response);
 		return response.data;
 	} catch (err) {
@@ -33,7 +31,6 @@ const getQuoteData = async () => {
 const getChoice2 = async () => {
 	try {
 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
-		// console.log(`Quote Data: ${response.data.quote}`);
 		console.log(response);
 		return response.data.character;
 	} catch (err) {
@@ -44,7 +41,6 @@ const getChoice2 = async () => {
 const getChoice3 = async () => {
 	try {
 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
-		// console.log(`Quote Data: ${response.data.quote}`);
 		console.log(response);
 		return response.data.character;
 	} catch (err) {
@@ -55,7 +51,6 @@ const getChoice3 = async () => {
 const getChoice4 = async () => {
 	try {
 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
-		// console.log(`Quote Data: ${response.data.quote}`);
 		console.log(response);
 		return response.data.character;
 	} catch (err) {
@@ -119,30 +114,6 @@ const createQuote = async () => {
 	for (let i = 0; i <= options.length; i++) {
 		options[i].textContent = `${quoteData[randomNumArr[i]]}`;
 	}
-
-	// for (let i = 0; i < options.length; i++) {
-	// 	options[i].addEventListener('click', function() {
-	// 		if (options[i].textContent == quoteElement.character) {
-	// 			console.log(quoteElement.character);
-	// 			options[i].style.backgroundColor = 'green';
-	// 			options[i].style.color = 'white';
-	// 			for (let j = 0; j < options.length; j++) {
-	// 				options[j].disabled = true;
-	// 			}
-	// 		} else {
-	// 			console.log(quoteElement.character);
-	// 			options[i].style.backgroundColor = 'red';
-	// 			options[i].style.color = 'white';
-	// 			for (let j = 0; j < options.length; j++) {
-	// 				options[j].disabled = true;
-	// 			}
-	// 		}
-	// 	});
-	// }
 };
 
 createQuote();
-
-// mainMenuBtn[1].addEventListener('click', function() {
-// 	window.location.href = `../start_the_game.html`;
-// });

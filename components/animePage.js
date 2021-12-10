@@ -4,8 +4,6 @@ import axios from 'axios';
 const guessAnimeBtn = document.getElementById('guessAnime');
 
 export const guessAnimePage = () => {
-	// console.log("button was clicked");
-
 	window.location.href = `${animePage}`;
 };
 
@@ -13,7 +11,6 @@ guessAnimeBtn && guessAnimeBtn.addEventListener('click', guessAnimePage);
 
 let buttonDiv = document.getElementsByClassName('column');
 let options = buttonDiv[2].getElementsByClassName('modeBtn');
-// let mainMenuBtn = buttonDiv[3].getElementsByClassName('modeBtn');
 
 let rand = Math.floor(Math.random() * 51);
 let rand2 = Math.floor(Math.random() * 51);
@@ -31,14 +28,11 @@ console.log(newArr);
 const getAnimeImg = async () => {
 	try {
 		const response = await axios.get(`https://api.jikan.moe/v3/top/anime/1/tv`);
-		// console.log(response.data);
 		return response.data;
 	} catch (err) {
 		console.log(err);
 	}
 };
-
-// getAnimeImg();
 
 const createAnimeGame = async () => {
 	const imgData = await getAnimeImg();
@@ -97,7 +91,3 @@ const createAnimeGame = async () => {
 };
 
 createAnimeGame();
-
-// mainMenuBtn[1].addEventListener('click', function() {
-// 	window.location.href = `../start_the_game.html`;
-// });
