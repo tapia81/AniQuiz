@@ -12,6 +12,7 @@ guessAnimeBtn && guessAnimeBtn.addEventListener('click', guessAnimePage);
 let buttonDiv = document.getElementsByClassName('column');
 let options = buttonDiv[2].getElementsByClassName('modeBtn');
 
+//Used to get random images from the top list of characters in the Jikan API
 let rand = Math.floor(Math.random() * 51);
 let rand2 = Math.floor(Math.random() * 51);
 let rand3 = Math.floor(Math.random() * 51);
@@ -25,6 +26,8 @@ newArr.push(rand3);
 newArr.push(rand4);
 console.log(newArr);
 
+//getting the response for the anime image
+
 const getAnimeImg = async () => {
 	try {
 		const response = await axios.get(`https://api.jikan.moe/v3/top/anime/1/tv`);
@@ -34,12 +37,14 @@ const getAnimeImg = async () => {
 	}
 };
 
+//creating the anime game
+
 const createAnimeGame = async () => {
 	const imgData = await getAnimeImg();
 
 	//appending the image on the page
 
-	const parentDiv = document.getElementById('picture');
+	const parentDiv = document.getElementById('animeColumn');
 	const animeImg = document.createElement('img');
 
 	//Anime response photo & answer from photo
@@ -76,38 +81,52 @@ const createAnimeGame = async () => {
 			if (options[i].textContent == imgData.top[rand].title) {
 				options[i].style.backgroundColor = 'green';
 				options[i].style.color = 'white';
+
+				let modalDiv = document.getElementById('modalContent'); 
+				let correctAnswerP = document.createElement('p'); 
+				correctAnswerP.textContent = `You were correct! The correct answer was ${imgData.top[rand].title}`
+				modalDiv.append(correctAnswerP)
+
 				for (let j = 0; j < options.length; j++) {
 					options[j].disabled = true;
+					dialog.show()
+
 				}
 			} else {
 				options[i].style.backgroundColor = 'red';
 				options[i].style.color = 'white';
+
+				let modalDiv = document.getElementById('modalContent'); 
+				let correctAnswerP = document.createElement('p'); 
+				correctAnswerP.textContent = `You were incorrect! The correct answer was ${imgData.top[rand].title}`
+				modalDiv.append(correctAnswerP)
+
 				for (let j = 0; j < options.length; j++) {
 					options[j].disabled = true;
+					dialog.show()
 				}
 			}
 		});
 	}
 };
+
 createAnimeGame();
 
-const clearImg = () => {
-	const parentDiv = document.getElementById('picture');
+//Modal section
 
-	while (parentDiv.firstChild) {
-		parentDiv.firstChild.remove();
-	}
-};
+  let dialog = document.querySelector('dialog');
+  let showDialogButton = document.querySelector('#show-dialog');
+  if (! dialog.showModal) {
+    dialogPolyfill.registerDialog(dialog);
+  }
+  showDialogButton.addEventListener('click', function() {
+    dialog.showModal();
+  });
 
-function reload() {
-	reload = location.reload();
-}
+  //close button not working..fix S
+  let x = document.getElementById('close');
 
-//next page functionality*
-let nextPageBtn = document.getElementsByClassName('nextQuestion');
-console.log(nextPageBtn);
-nextPageBtn[0].addEventListener('click', function() {
-	reload();
-	clearImg();
-	createAnimeGame();
-});
+  x.addEventListener('click', function() {
+	  console.log('am i working');
+
+	});
