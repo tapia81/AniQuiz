@@ -83,7 +83,6 @@ const createQuote = async () => {
 	console.log('quote: ' + quoteElement.quote);
 	console.log('quote character data: ' + quoteData);
 
-
 	parentP.appendChild(paraEle);
 	paraEle.appendChild(hintEle);
 
@@ -108,3 +107,24 @@ const createQuote = async () => {
 };
 
 createQuote();
+
+const clearImg = () => {
+	const parentDiv = document.getElementById('quoteAPI');
+
+	while (parentDiv.firstChild) {
+		parentDiv.firstChild.remove();
+	}
+};
+
+function reload() {
+	reload = location.reload();
+}
+
+//next page functionality*
+let nextPageBtn = document.getElementsByClassName('nextQuestion');
+console.log(nextPageBtn);
+nextPageBtn[0].addEventListener('click', function() {
+	reload();
+	clearImg();
+	createQuote();
+});
