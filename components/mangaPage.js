@@ -27,9 +27,37 @@ const getMangaImg = async () => {
 	try {
 		const response = await axios.get(`
     https://api.jikan.moe/v3/top/manga/1/manga`);
-		// console.log(response.data.top[rand].image_url)
 		return response.data;
-		// console.log('th')
+	} catch (err) {
+		console.log(err);
+	}
+};
+
+const getMangaResponse2 = async () => {
+	try {
+		const response = await axios.get(`
+        https://api.jikan.moe/v3/top/manga/1/manga`);
+		return response.data.top[rand2].title;
+	} catch (err) {
+		console.log(err);
+	}
+};
+
+const getMangaResponse3 = async () => {
+	try {
+		const response = await axios.get(`
+            https://api.jikan.moe/v3/top/manga/1/manga`);
+		return response.data.top[rand3].title;
+	} catch (err) {
+		console.log(err);
+	}
+};
+
+const getMangaResponse4 = async () => {
+	try {
+		const response = await axios.get(`
+        https://api.jikan.moe/v3/top/manga/1/manga`);
+		return response.data.top[rand4].title;
 	} catch (err) {
 		console.log(err);
 	}
@@ -62,6 +90,24 @@ const createMangaGame = async () => {
 
 	for (let i = 0; i < options.length; i++) {
 		options[i].textContent = `${imgData.top[newArr[randomNumArr[i]]].title}`;
+	}
+
+	for (let i = 0; i < options.length; i++) {
+		options[i].addEventListener('click', function() {
+			if (options[i].textContent == imgData.top[rand].title) {
+				options[i].style.backgroundColor = 'green';
+				options[i].style.color = 'white';
+				for (let j = 0; j < options.length; j++) {
+					options[j].disabled = true;
+				}
+			} else {
+				options[i].style.backgroundColor = 'red';
+				options[i].style.color = 'white';
+				for (let j = 0; j < options.length; j++) {
+					options[j].disabled = true;
+				}
+			}
+		});
 	}
 };
 

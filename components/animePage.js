@@ -5,8 +5,6 @@ import axios from 'axios';
 const guessAnimeBtn = document.getElementById('guessAnime');
 
 export const guessAnimePage = () => {
-	// console.log("button was clicked");
-
 	window.location.href = `${animePage}`;
 };
 
@@ -31,12 +29,12 @@ console.log(newArr);
 const getAnimeImg = async () => {
 	try {
 		const response = await axios.get(`https://api.jikan.moe/v3/top/anime/1/tv`);
-		// console.log(response.data);
 		return response.data;
 	} catch (err) {
 		console.log(err);
 	}
 };
+
 const createAnimeGame = async () => {
 	const imgData = await getAnimeImg();
 
@@ -74,9 +72,23 @@ const createAnimeGame = async () => {
 		options[i].textContent = `${imgData.top[newArr[randomNumArr[i]]].title}`;
 	}
 
-
-
-};
+	for (let i = 0; i < options.length; i++) {
+		options[i].addEventListener('click', function() {
+			if (options[i].textContent == imgData.top[rand].title) {
+				options[i].style.backgroundColor = 'green';
+				options[i].style.color = 'white';
+				for (let j = 0; j < options.length; j++) {
+					options[j].disabled = true;
+				}
+			} else {
+				options[i].style.backgroundColor = 'red';
+				options[i].style.color = 'white';
+				for (let j = 0; j < options.length; j++) {
+					options[j].disabled = true;
+				}
+			}
+		});
+	}
 
 createAnimeGame();
 

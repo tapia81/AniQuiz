@@ -12,18 +12,15 @@ guessQuoteBtn && guessQuoteBtn.addEventListener('click', guessQuotePage);
 // Quote Page Functionality (guess_that_quote.html)
 
 //An array to hold character data for the multiple choice buttons
-let quoteData = [];
 
 //setting variable names to each multiple choice answer button
 
 let buttonDiv = document.getElementsByClassName('column');
 let options = buttonDiv[2].getElementsByClassName('modeBtn');
-let btns = buttonDiv[2].getElementsByTagName('button');
 
 const getQuoteData = async () => {
 	try {
 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
-		// console.log(`Quote Data: ${response.data.quote}`);
 		console.log(response);
 		return response.data;
 	} catch (err) {
@@ -56,7 +53,7 @@ const getChoice3 = async () => {
 const getChoice4 = async () => {
 	try {
 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
-	
+
 		console.log(response);
 		return response.data.character;
 	} catch (err) {
@@ -65,6 +62,7 @@ const getChoice4 = async () => {
 };
 
 const createQuote = async () => {
+	let quoteData = [];
 	const quoteElement = await getQuoteData();
 	const choice2 = await getChoice2();
 	const choice3 = await getChoice3();
@@ -102,21 +100,10 @@ const createQuote = async () => {
 
 	randomGen();
 
-	checkAnswer = (i) => {
-		console.log(i);
-		if (options[i].textContent == quoteElement.character) {
-			options[i].style.backgroundColor = 'green';
-			options[i].style.color = 'white';
-		} else {
-			options[i].style.backgroundColor = 'red';
-			options[i].style.color = 'white';
-		}
-	};
-
 	let randomNumArr = arr;
+
 	for (let i = 0; i <= options.length; i++) {
 		options[i].textContent = `${quoteData[randomNumArr[i]]}`;
-		options[i].addEventListener('click', checkAnswer(i));
 	}
 };
 

@@ -1,62 +1,58 @@
 :root {
-    --white: #FFFFFF; 
-    --cultured: #F5F3F4; 
-    --lightGray: #D3D3D3; 
-    --silverChalice: #B1A7A6; 
-    --imperialRed: #E5383B; 
-    --carnelian: #BA181B; 
-    --rubyRed: #A4161A;
-    --bloodRed: #660708; 
-    --eerieBlack: #161A1D; 
-    --richBlack: #0B090A; 
-
+	--white: #ffffff;
+	--cultured: #f5f3f4;
+	--lightGray: #d3d3d3;
+	--silverChalice: #b1a7a6;
+	--imperialRed: #e5383b;
+	--carnelian: #ba181b;
+	--rubyRed: #a4161a;
+	--bloodRed: #660708;
+	--eerieBlack: #161a1d;
+	--richBlack: #0b090a;
 }
 
-html, body {
-    width: 100%; 
-    background-color: var(--lightGray);
+html,
+body {
+	width: 100%;
+	background-color: var(--lightGray);
 }
 
 /* 
 
 Navbar styling 
 
-*/ 
-
+*/
 
 .navbar-start {
-    flex-grow: 1;
-    justify-content: center;
-    color: var(--richBlack);
+	flex-grow: 1;
+	justify-content: center;
+	color: var(--richBlack);
 }
 
 .navbar {
-   background-color: var(--white);
-   overflow: hidden;
-   border: 1px solid;
+	background-color: var(--white);
+	overflow: hidden;
+	border: 1px solid;
 }
 
 .mainContainer {
-    margin: 40px;
+	margin: 40px;
 }
 
 .navbar-item:hover {
-    background-color: var(--white) !important;
-    color: var(--richBlack) !important;
-
-
+	background-color: var(--white) !important;
+	color: var(--richBlack) !important;
 }
 
 .navbar-burger:hover {
-    background-color: var(--white) !important;
+	background-color: var(--white) !important;
 }
 
-
-.navbar-item, .navbar-link {
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-
-  }
+.navbar-item,
+.navbar-link {
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+}
 
 .navbar-item img {
 	max-height: none;
@@ -68,48 +64,42 @@ about/index.html styling
 
 */
 
-
 .aboutTitle {
-    font-size: 4em;
-    font-weight: bold;
+	font-size: 4em;
+	font-weight: bold;
 }
 
 .aboutPara {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid;
-    padding: 5px 20px 5px 20px;
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid;
+	padding: 5px 20px 5px 20px;
 }
 
 .secondaryTitle {
-    font-size: 2em; 
-    font-style:oblique;
-    
+	font-size: 2em;
+	font-style: oblique;
 }
 
 .contactSection {
-    display: flex;
-
+	display: flex;
 }
 
 .logoStyle {
-    margin: 5px;
-    border: 2px solid black;
-    
+	margin: 5px;
+	border: 2px solid black;
 }
 
 .resize {
-    width: 100px;
-    height: auto;
+	width: 100px;
+	height: auto;
 }
 
 .resize {
-    width: auto; 
-    height: 100px;
-
+	width: auto;
+	height: 100px;
 }
-
 
 /*
 How to play styling
@@ -137,7 +127,6 @@ How to play styling
 	font-size: 5vw;
 }
 
-
 .slideshow-box {
 	height: 80vh;
 	width: 50vw;
@@ -145,6 +134,7 @@ How to play styling
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: none;
 }
 
 .slideshow-image {
@@ -154,6 +144,10 @@ How to play styling
 
 .slideshow-image:hover {
 	cursor: pointer;
+}
+
+.hiddenImage {
+	display: none;
 }
 .body-content {
 	display: flex;
@@ -165,21 +159,20 @@ How to play styling
 
 /*
 Start Game
-*/ 
+*/
 
 .gameTitle {
-    font-size: 3em;
-    font-weight: bold;
-    text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
 }
 
 .centerColumn {
-    text-align: center;
+	text-align: center;
 }
 
 .modeBtn {
-    margin-top: 20px;
-    
+	margin-top: 20px;
 }
 
 /*
