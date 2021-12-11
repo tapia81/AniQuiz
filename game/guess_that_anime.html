@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>    
+
+            
     <link rel="stylesheet" href="/style.css">
     <title>AniQuiz</title>
 </head>
@@ -55,28 +62,37 @@
 
 <div class="columns centerColumn">
   <div class="column" id='animeColumn'>
-    <div id="picture">
-      
-    </div>
     <p class="animePicture" id="animeAPI">What anime is pictured in the image below?</p>
   </div>
 </div>
 
 <div class="columns centerColumn">
   <div class="column">
-    <button class="button modeBtn" id="animeChoice1">Choice1</button>
-    <button class="button modeBtn" id="animeChoice2">Choice2</button>
-    <button class="button modeBtn" id="animeChoice3">Choice3</button>
-    <button class="button modeBtn" id="animeChoice4">Choice4</button>
+    <button class="button modeBtn" data-target="modal1" id="animeChoice1">Choice1</button>
+    <button class="button modeBtn"  data-target="modal1"id="animeChoice2">Choice2</button>
+    <button class="button modeBtn" data-target="modal1" id="animeChoice3">Choice3</button>
+    <button class="button modeBtn" data-target="modal1" id="animeChoice4">Choice4</button>
   </div>
 </div>
 
 <div class="columns centerColumn">
   <div class="column">
-    <button class="button modeBtn nextQuestion">Next question</button>
-    <button class="button modeBtn mainMenu">Return to main menu</button>
+    <button class="button modeBtn" id="nextQuestion">Next question</button>
+    <button class="button modeBtn" id="mainMenu">Return to main menu</button>
 </div>
 </div>
+
+<!-- /* Modal Section */  -->
+<dialog class="dialog close">
+  <h4 class="mdl-dialog__title"></h4>
+  <div id="modalContent" class="mdl-dialog__content">
+
+  </div>
+  <div class="mdl-dialog__actions">
+    <button type="button" class="mdl-button">Agree</button>
+    <button type="button" class="mdl-button close" id="close">Disagree</button>
+  </div>
+</dialog>
 
     <script type="module" src="/script.js"></script>
 </body>
