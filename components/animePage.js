@@ -1,4 +1,5 @@
 import animePage from '/game/guess_that_anime.html';
+import startGame from '/start_the_game.html'
 import axios from 'axios';
 
 const guessAnimeBtn = document.getElementById('guessAnime');
@@ -39,7 +40,7 @@ const createAnimeGame = async () => {
 
 	//appending the image on the page
 
-	const parentDiv = document.getElementById('animeColumn');
+	const parentDiv = document.getElementById('picture');
 	const animeImg = document.createElement('img');
 
 	//Anime response photo & answer from photo
@@ -88,6 +89,37 @@ const createAnimeGame = async () => {
 			}
 		});
 	}
-};
 
 createAnimeGame();
+
+const clearImg = () => {
+    
+
+	const parentDiv = document.getElementById('picture');
+
+    while (parentDiv.firstChild) {
+        parentDiv.firstChild.remove();
+    }
+}
+
+function reload() {
+    reload = location.reload();
+}
+
+	//next page functionality* 
+let nextPageBtn = document.getElementsByClassName('nextQuestion'); 
+console.log(nextPageBtn)
+nextPageBtn[0].addEventListener('click', function() {
+	reload(); 
+	clearImg();
+	createAnimeGame(); 
+	
+	// console.log('this is the next page button being clicked. ')
+
+	
+})
+	//main menu functionality* 
+let mainMenuBtn = document.getElementsByClassName('mainMenu'); 
+mainMenuBtn[0].addEventListener('click', function() {
+	window.location.href = `${startGame}`
+})

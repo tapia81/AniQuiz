@@ -31,6 +31,7 @@ const getQuoteData = async () => {
 const getChoice2 = async () => {
 	try {
 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
+
 		console.log(response);
 		return response.data.character;
 	} catch (err) {
@@ -41,6 +42,7 @@ const getChoice2 = async () => {
 const getChoice3 = async () => {
 	try {
 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
+
 		console.log(response);
 		return response.data.character;
 	} catch (err) {
@@ -51,6 +53,7 @@ const getChoice3 = async () => {
 const getChoice4 = async () => {
 	try {
 		const response = await axios.get(`https://animechan.vercel.app/api/random`);
+
 		console.log(response);
 		return response.data.character;
 	} catch (err) {
@@ -69,12 +72,6 @@ const createQuote = async () => {
 	const paraEle = document.createElement('p');
 	const hintEle = document.createElement('p');
 
-	// options.addEventListener('click', function() {
-	// 	if (option1.textContent == quoteElement.character) {
-	// 		console.log('hi');
-	// 	}
-	// });
-
 	//appending each quote to the who said that quote page.
 	paraEle.append(`${quoteElement.quote}.`);
 	hintEle.append(`*Hint: this quote is from the anime ${quoteElement.anime}`);
@@ -86,13 +83,7 @@ const createQuote = async () => {
 	console.log('quote: ' + quoteElement.quote);
 	console.log('quote character data: ' + quoteData);
 
-	// Must randomize the choices -- Work on this later
-	//currently the first data being pushed into quoteData is the answer. quoteElement.character = quoteElement.quote
 
-	//Math.floor.. gets a random number from 0-3 which is what we want since there are four choices
-
-	// let randomInteger = Math.floor(Math.random() * 4);
-	//issue with this is that it doesn't account for if a number repeats
 	parentP.appendChild(paraEle);
 	paraEle.appendChild(hintEle);
 

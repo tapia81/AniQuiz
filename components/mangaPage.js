@@ -5,6 +5,7 @@ const guessMangaBtn = document.getElementById('guessManga');
 
 export const guessMangaPage = () => {
 	window.location.href = `${mangaPage}`;
+
 };
 guessMangaBtn && guessMangaBtn.addEventListener('click', guessMangaPage);
 
