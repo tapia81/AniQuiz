@@ -180,3 +180,14 @@ Start Game
 Dynamic guess that quote page
 
 */
+
+.modal {
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.35s ease-in;
+  }
+   
+  .modal.is-visible {
+	visibility: visible;
+	opacity: 1;
+  }

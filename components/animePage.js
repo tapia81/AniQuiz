@@ -82,28 +82,28 @@ const createAnimeGame = async () => {
 				options[i].style.backgroundColor = 'green';
 				options[i].style.color = 'white';
 
-				let modalDiv = document.getElementById('modalContent'); 
-				let correctAnswerP = document.createElement('p'); 
-				correctAnswerP.textContent = `You were correct! The correct answer was ${imgData.top[rand].title}`
-				modalDiv.append(correctAnswerP)
+				// let modalDiv = document.getElementById('modalContent'); 
+				// let correctAnswerP = document.createElement('p'); 
+				// correctAnswerP.textContent = `You were correct! The correct answer was ${imgData.top[rand].title}`
+				// modalDiv.append(correctAnswerP)
 
 				for (let j = 0; j < options.length; j++) {
 					options[j].disabled = true;
-					dialog.show()
+					// dialog.show()
 
 				}
 			} else {
 				options[i].style.backgroundColor = 'red';
 				options[i].style.color = 'white';
 
-				let modalDiv = document.getElementById('modalContent'); 
-				let correctAnswerP = document.createElement('p'); 
-				correctAnswerP.textContent = `You were incorrect! The correct answer was ${imgData.top[rand].title}`
-				modalDiv.append(correctAnswerP)
+				// let modalDiv = document.getElementById('modalContent'); 
+				// let correctAnswerP = document.createElement('p'); 
+				// correctAnswerP.textContent = `You were incorrect! The correct answer was ${imgData.top[rand].title}`
+				// modalDiv.append(correctAnswerP)
 
 				for (let j = 0; j < options.length; j++) {
 					options[j].disabled = true;
-					dialog.show()
+					// dialog.show()
 				}
 			}
 		});
@@ -114,19 +114,3 @@ createAnimeGame();
 
 //Modal section
 
-  let dialog = document.querySelector('dialog');
-  let showDialogButton = document.querySelector('#show-dialog');
-  if (! dialog.showModal) {
-    dialogPolyfill.registerDialog(dialog);
-  }
-  showDialogButton.addEventListener('click', function() {
-    dialog.showModal();
-  });
-
-  //close button not working..fix S
-  let x = document.getElementById('close');
-
-  x.addEventListener('click', function() {
-	  console.log('am i working');
-
-	});
