@@ -62,69 +62,64 @@ const getChoice4 = async () => {
 };
 
 const createQuote = async () => {
-	let quoteData = [];
-	const quoteElement = await getQuoteData();
-	const choice2 = await getChoice2();
-	const choice3 = await getChoice3();
-	const choice4 = await getChoice4();
-
 	const parentP = document.getElementById('quoteAPI');
-	const paraEle = document.createElement('p');
-	const hintEle = document.createElement('p');
+	if (parentP) {
+		let quoteData = [];
+		const quoteElement = await getQuoteData();
+		const choice2 = await getChoice2();
+		const choice3 = await getChoice3();
+		const choice4 = await getChoice4();
 
-	//appending each quote to the who said that quote page.
-	paraEle.append(`${quoteElement.quote}.`);
-	hintEle.append(`*Hint: this quote is from the anime ${quoteElement.anime}`);
+		const paraEle = document.createElement('p');
+		const hintEle = document.createElement('p');
 
-	//pushing the quote character data to quotedata array
-	quoteData.push(quoteElement.character, choice2, choice3, choice4);
+		//appending each quote to the who said that quote page.
+		paraEle.append(`${quoteElement.quote}.`);
+		hintEle.append(`*Hint: this quote is from the anime ${quoteElement.anime}`);
 
-	//logging the data
-	console.log('quote: ' + quoteElement.quote);
-	console.log('quote character data: ' + quoteData);
+		//pushing the quote character data to quotedata array
+		quoteData.push(quoteElement.character, choice2, choice3, choice4);
 
-	parentP.appendChild(paraEle);
-	paraEle.appendChild(hintEle);
+		//logging the data
+		console.log('quote: ' + quoteElement.quote);
+		console.log('quote character data: ' + quoteData);
+		parentP.appendChild(paraEle);
+		paraEle.appendChild(hintEle);
+		let arr = [];
 
-	let arr = [];
+		randomGen = () => {
+			for (let choices = [ 0, 1, 2, 3 ], i = options.length; i--; ) {
+				let randomNum = choices.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
+				arr.push(randomNum);
+			}
+			return arr;
+		};
+		console.log(arr);
 
-	randomGen = () => {
-		for (let choices = [ 0, 1, 2, 3 ], i = options.length; i--; ) {
-			let randomNum = choices.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
-			arr.push(randomNum);
+		randomGen();
+
+		let randomNumArr = arr;
+
+		for (let i = 0; i <= options.length; i++) {
+			options[i].textContent = `${quoteData[randomNumArr[i]]}`;
 		}
-		return arr;
-	};
-	console.log(arr);
-
-	randomGen();
-
-	let randomNumArr = arr;
-
-	for (let i = 0; i <= options.length; i++) {
-		options[i].textContent = `${quoteData[randomNumArr[i]]}`;
 	}
 };
 
 createQuote();
 
-const clearImg = () => {
-	const parentDiv = document.getElementById('quoteAPI');
-
-	while (parentDiv.firstChild) {
-		parentDiv.firstChild.remove();
-	}
-};
-
-function reload() {
-	reload = location.reload();
-}
-
-//next page functionality*
 let nextPageBtn = document.getElementsByClassName('nextQuestion');
 console.log(nextPageBtn);
 nextPageBtn[0].addEventListener('click', function() {
-	reload();
-	clearImg();
-	createQuote();
+	console.log('next click');
+	rand = Math.floor(Math.random() * 50);
+	rand2 = Math.floor(Math.random() * 50);
+	rand3 = Math.floor(Math.random() * 50);
+	rand4 = Math.floor(Math.random() * 50);
+	createAnimeGame();
+	for (let j = 0; j < options.length; j++) {
+		options[j].disabled = false;
+		options[j].style.backgroundColor = 'white';
+		options[j].style.color = 'black';
+	}
 });

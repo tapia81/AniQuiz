@@ -175,6 +175,57 @@ Start Game
 	margin-top: 20px;
 }
 
+.previousQuestion {
+	display: none;
+}
+
+#picture {
+	height: 400px;
+}
+
+.model-box {
+	background-color: rgba(0, 0, 0, 0.1);
+	display: none;
+	position: absolute;
+	height: 120vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.model-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	gap: 10%;
+	background-color: white;
+	height: 50vh;
+	width: 50vw;
+	color: black;
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;
+	z-index: 2;
+}
+
+.model-content #close-button {
+	font-size: 2em;
+	width: 1em;
+	height: 0em;
+	cursor: pointer;
+}
+
+.model-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80%;
+	width: 70%;
+}
 /*
 
 Dynamic guess that quote page
