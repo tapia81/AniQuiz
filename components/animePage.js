@@ -1,4 +1,5 @@
 import animePage from '/game/guess_that_anime.html';
+import startGamePage from '/start_the_game.html'
 import axios from 'axios';
 
 const guessAnimeBtn = document.getElementById('guessAnime');
@@ -37,10 +38,14 @@ const getAnimeImg = async () => {
 	}
 };
 
+
 //creating the anime game
 
 const createAnimeGame = async () => {
 	const imgData = await getAnimeImg();
+		closeModal(); 
+
+
 
 	//appending the image on the page
 
@@ -76,41 +81,84 @@ const createAnimeGame = async () => {
 		options[i].textContent = `${imgData.top[newArr[randomNumArr[i]]].title}`;
 	}
 
+    //Choices for correct & incorrect button clicks. 
+
+
 	for (let i = 0; i < options.length; i++) {
 		options[i].addEventListener('click', function() {
+
+			//correct option screen 
+
 			if (options[i].textContent == imgData.top[rand].title) {
 				options[i].style.backgroundColor = 'green';
 				options[i].style.color = 'white';
 
-				// let modalDiv = document.getElementById('modalContent'); 
-				// let correctAnswerP = document.createElement('p'); 
-				// correctAnswerP.textContent = `You were correct! The correct answer was ${imgData.top[rand].title}`
-				// modalDiv.append(correctAnswerP)
+
+				let modalDiv = document.getElementById('modalContent'); 
+				let correctAnswerP = document.createElement('p'); 
+				let correctDiv= document.createElement('div');
+				let correctAnswer2 = document.createElement('p');  
+				correctDiv.classList.add('correct');
+				correctAnswerP.textContent = `Congrats! You choose the correct answer. Your answer was:`
+				correctAnswer2 = `${imgData.top[rand].title}`
+				modalDiv.append(correctAnswerP)
+				modalDiv.append(correctDiv); 
+				correctDiv.append(correctAnswer2); 
 
 				for (let j = 0; j < options.length; j++) {
 					options[j].disabled = true;
-					// dialog.show()
+					openModal(); 
 
 				}
 			} else {
+
+				//Incorrect option screen 
+
 				options[i].style.backgroundColor = 'red';
 				options[i].style.color = 'white';
 
-				// let modalDiv = document.getElementById('modalContent'); 
-				// let correctAnswerP = document.createElement('p'); 
-				// correctAnswerP.textContent = `You were incorrect! The correct answer was ${imgData.top[rand].title}`
-				// modalDiv.append(correctAnswerP)
-
+				let modalDiv = document.getElementById('modalContent'); 
+				let incorrectAnswer = document.createElement('p'); 
+				let incorrectDiv= document.createElement('div');
+				let correctAnswer = document.createElement('p');  
+				incorrectDiv.classList.add('incorrect');
+				incorrectAnswer.textContent = `Sorry, You chose the wrong answer! The correct answer should have been: `
+				correctAnswer = `${imgData.top[rand].title}`
+				modalDiv.append(incorrectAnswer)
+				modalDiv.append(incorrectDiv); 
+				incorrectDiv.append(correctAnswer); 
+				
 				for (let j = 0; j < options.length; j++) {
 					options[j].disabled = true;
-					// dialog.show()
+					openModal(); 
+
 				}
 			}
 		});
 	}
+	returnMenu(); 
 };
 
 createAnimeGame();
 
 //Modal section
+let modal = document.querySelector(".modal")
+const openModal = () => {
 
+modal.classList.add('is-active'); 
+}
+
+const closeModal = () => {
+	let modalBtn = document.getElementById('closeBt');
+	modalBtn.addEventListener('click', function() {
+	modal.classList.remove('is-active')
+	})
+}
+
+//Main menu functionality 
+const returnMenu = () => {
+    let menu = document.getElementById('animeMainMenu'); 
+    menu.addEventListener('click', function () {
+        window.location.href = `${startGamePage}`
+    })    
+}

@@ -176,18 +176,36 @@ Start Game
 }
 
 /*
-
-Dynamic guess that quote page
+Modal 
 
 */
 
 .modal {
-	visibility: hidden;
-	opacity: 0;
-	transition: all 0.35s ease-in;
+	text-align: center; 
+	border: 2px solid; 
+
+
   }
-   
-  .modal.is-visible {
-	visibility: visible;
-	opacity: 1;
+
+  
+  
+
+  div.correct {
+	  border: 2px solid white; 
+	  background-color: green; 
+	  color: white; 
+	  width: 50%; 
+	  margin: 0 auto; 
+	  margin-top: 10px;
+	  padding: 5px;
+  }
+
+  div.incorrect {
+	  border: 2px solid white; 
+	  background-color: var(--carnelian); 
+	  color: white; 
+	  width: 50%; 
+	  margin: 0 auto; 
+	  margin-top: 10px;
+	  padding: 5px; 
   }
