@@ -37,6 +37,8 @@ Navbar styling
 
 .mainContainer {
 	margin: 40px;
+	/* display: flex;
+	justify-content:center;  */
 }
 
 .navbar-item:hover {
@@ -145,7 +147,10 @@ about/index.html styling
 How to play styling
 
 */
-
+.playContainer {
+	display: flex;
+	justify-content: center;
+}
 .game-rules-box {
 	height: 80vh;
 	width: 40vw;
@@ -164,7 +169,8 @@ How to play styling
 	width: 40vw;
 }
 .game-rules-content h2 {
-	font-size: 5vw;
+	font-size: 4em;
+	font-weight: bold;
 }
 
 .slideshow-box {
@@ -190,9 +196,9 @@ How to play styling
 	display: none;
 }
 .body-content {
-	display: flex;
+	/* display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: center; */
 	align-items: center;
 	gap: 3%;
 }
@@ -222,6 +228,14 @@ Start Game
 #animeColumn img {
 	height: 40vh;
 	border: 2px solid;
+}
+
+.modeTitle {
+	margin-top: 100px;
+}
+
+.gameBtns {
+	margin-top: 20px;
 }
 
 /*

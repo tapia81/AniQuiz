@@ -149,7 +149,7 @@ if (parentP) {
 	nextPageBtn[0].addEventListener('click', function() {
 		console.log('next click');
 		createQuote();
-		clearPage(); 
+		// clearPage(); 
 		for (let j = 0; j < options.length; j++) {
 			options[j].disabled = false;
 			options[j].style.backgroundColor = 'white';
