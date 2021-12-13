@@ -229,7 +229,7 @@ Start Game
 
 #animeColumn img {
 	height: 40vh;
-	border: 2px solid;
+	/* border: 2px solid; */
 }
 
 .modeTitle {

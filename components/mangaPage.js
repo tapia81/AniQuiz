@@ -63,13 +63,27 @@ if (mangaParentDiv) {
 	};
 
 	const createMangaGame = async () => {
+		let load = document.getElementById('loading'); 
 		if (mangaParentDiv) {
 			returnMenu();
+
+			if (storedData.length === 0 ) {
+				load.style.display = 'block'
+	
+			}
+
+
 			const imgData = await getMangaImg();
 
 			let selected = imgData.top[rand1];
 			storedData.push(selected);
 			mangaImg.src = selected.image_url;
+
+			
+			if (storedData.length > 0 ) {
+				load.style.display = 'none';
+		
+			}
 
 			//manga button choice randomizer section
 

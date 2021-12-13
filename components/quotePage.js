@@ -156,8 +156,8 @@ if (parentP) {
 
 
 		while (parentP.firstChild) {
-			parentP.firstChild.remove();
-			createQuote();
+			parentP.firstChild ===  ""
+	
 		}
 
 	}

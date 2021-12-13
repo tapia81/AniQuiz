@@ -72,9 +72,19 @@ if (animeParentDiv) {
 		});
 	};
 
+
 	const createAnimeGame = async () => {
+		let load = document.getElementById('loading'); 
+
 		if (animeParentDiv) {
 			returnMenu();
+
+		if (storedData.length === 0 ) {
+			load.style.display = 'block'
+
+		}
+			console.log('stored data: ' + storedData.length);
+			
 			const imgData = await getAnimeImg();
 
 			let selected = imgData.top[rand1];
@@ -82,6 +92,13 @@ if (animeParentDiv) {
 			storedData.push(selected);
 
 			animeImg.src = selected.image_url;
+			console.log('stored data: ' + storedData.length);
+
+			if (storedData.length > 0 ) {
+				load.style.display = 'none';
+		
+			}
+
 
 			//anime button choice randomizer section
 
