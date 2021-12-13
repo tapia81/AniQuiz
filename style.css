@@ -183,8 +183,12 @@ Start Game
 	height: 40vh;
 }
 
+/*
+Modal styling
+*/
+
 .model-box {
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: rgba(0, 0, 0, 0.5);
 	display: none;
 	position: absolute;
 	height: 120vh;
@@ -210,6 +214,7 @@ Start Game
 	border-style: solid;
 	border-width: 4px;
 	z-index: 2;
+
 }
 
 .model-text {
@@ -232,5 +237,8 @@ Start Game
 }
 
 .modal-close {
+
 	background-color: rgba(0, 0, 0, 0.5);
+	top: 180px !important; 
+	right: 20px !important; 
 }

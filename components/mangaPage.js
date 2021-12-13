@@ -17,12 +17,19 @@ let rand1 = Math.floor(Math.random() * 50);
 let rand2 = Math.floor(Math.random() * 50);
 let rand3 = Math.floor(Math.random() * 50);
 let rand4 = Math.floor(Math.random() * 50);
+
+//this cycles through 25 pages of top manga. 
+let randomizeManga = Math.floor(Math.random() * 25); 
+
+
 const mangaParentDiv = document.getElementById('mangaColumn');
 const mangaImg = document.createElement('img');
+
 let storedData = [];
 let storedButtonOrder = [];
+
 let nextPageBtn = document.getElementsByClassName('nextQuestion');
-let exitModelBox = document.getElementsByClassName('model-box');
+let modelBox = document.getElementsByClassName('model-box');
 let modelText = document.getElementsByClassName('model-text');
 let modalBtn = document.getElementById('closeBt');
 let answer = document.getElementsByClassName('answer');
@@ -33,7 +40,7 @@ if (mangaParentDiv) {
 	const getMangaImg = async () => {
 		// return data;
 		try {
-			const response = await axios.get(`https://api.jikan.moe/v3/top/manga/1/manga`);
+			const response = await axios.get(`https://api.jikan.moe/v3/top/manga/${randomizeManga}/manga`);
 			console.log(response);
 			return response.data;
 		} catch (err) {
@@ -42,8 +49,13 @@ if (mangaParentDiv) {
 	};
 
 	modalBtn.addEventListener('click', function() {
-		exitModelBox[0].style.display = 'none';
+		modelBox[0].style.display = 'none';
+		document.body.style.position = '';
+		document.body.style.top = '';
+		
 	});
+	//Modal initially starts as invisible
+	modelBox[0].style.display = 'none';
 
 	const returnMenu = () => {
 		menu.addEventListener('click', function() {
@@ -83,7 +95,13 @@ if (mangaParentDiv) {
 
 			for (let i = 0; i < options.length; i++) {
 				options[i].addEventListener('click', function() {
-					exitModelBox[0].style.display = 'flex';
+					modelBox[0].style.display = 'flex';
+
+					//stops the page from scrolling when the modal box appears
+					document.body.style.position = 'fixed';
+					document.body.style.top = `-${window.scrollY}px`;
+
+
 					if (options[i].textContent == imgData.top[rand1].title) {
 						modelText[0].textContent = `Congrats! You choose the correct answer. Your answer was:`;
 						answer[0].textContent = `${imgData.top[rand1].title}`;
@@ -114,7 +132,7 @@ if (mangaParentDiv) {
 
 	let i = 1;
 	console.log(`Question ${i}`);
-	exitModelBox[0].style.display = 'none';
+
 	nextPageBtn[0].addEventListener('click', function() {
 		i += 1;
 		if (i < 11) {
