@@ -2,6 +2,7 @@ import quotePage from '/game/guess_that_quote.html';
 import startGamePage from '/start_the_game.html';
 import axios from 'axios';
 
+
 const guessQuoteBtn = document.getElementById('guessQuote');
 
 export const guessQuotePage = () => {
@@ -17,6 +18,7 @@ const parentP = document.getElementById('quoteAPI');
 const paraEle = document.createElement('p');
 const hintEle = document.createElement('p');
 let menu = document.getElementById('quoteMainMenu');
+
 
 if (parentP) {
 	parentP.appendChild(paraEle);
@@ -72,63 +74,79 @@ if (parentP) {
 
 	const createQuote = async () => {
 		if (parentP) {
+			let load = document.getElementById('loading'); 
+
 			let quoteData = [];
-			const quoteElement = await getQuoteData();
-			const choice2 = await getChoice2();
-			const choice3 = await getChoice3();
-			const choice4 = await getChoice4();
 
-			//appending each quote to the who said that quote page.
-			paraEle.append(`${quoteElement.quote}.`);
-			hintEle.append(`*Hint: this quote is from the anime ${quoteElement.anime}`);
+					const quoteElement = await getQuoteData();
+					const choice2 = await getChoice2();
+					const choice3 = await getChoice3();
+					const choice4 = await getChoice4();
 
-			//pushing the quote character data to quotedata array
-			quoteData.push(quoteElement.character, choice2, choice3, choice4);
-
-			//logging the data
-			// console.log('quote: ' + quoteElement.quote);
-			console.log('character: ' + quoteElement.character);
-			// console.log('quote character data: ' + quoteData);
-
-			paraEle.appendChild(hintEle);
-			let arr = [];
-
-			randomGen = () => {
-				for (let choices = [ 0, 1, 2, 3 ], i = options.length; i--; ) {
-					let randomNum = choices.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
-					arr.push(randomNum);
-				}
-				return arr;
-			};
-
-			randomGen();
-
-			let randomNumArr = arr;
-			console.log(quoteData);
-			// for (let i = 0; i <= options.length; i++) {
-			options[[ randomNumArr[0] ]].textContent = quoteData[0];
-			options[[ randomNumArr[1] ]].textContent = quoteData[1];
-			options[[ randomNumArr[2] ]].textContent = quoteData[2];
-			options[[ randomNumArr[3] ]].textContent = quoteData[3];
-
-			for (let i = 0; i < options.length; i++) {
-				options[i].addEventListener('click', function() {
-					if (options[i].textContent == quoteElement.character) {
-						console.log('right');
-						options[i].style.backgroundColor = 'green';
-						options[i].style.color = 'white';
-						for (let j = 0; j < options.length; j++) {
-							options[j].disabled = true;
-						}
-					} else {
-						options[i].style.backgroundColor = 'red';
-						options[i].style.color = 'white';
-						for (let j = 0; j < options.length; j++) {
-							options[j].disabled = true;
-						}
-					}
-				});
+			if (quoteData.length === 0) {
+				load.style.display = 'block';
 			}
+
+			load.style.display = 'none'; 
+		
+					 
+					
+
+					//appending each quote to the who said that quote page.
+					paraEle.append(`${quoteElement.quote}.`);
+					hintEle.append(`*Hint: this quote is from the anime ${quoteElement.anime}`);
+
+					//pushing the quote character data to quotedata array
+					quoteData.push(quoteElement.character, choice2, choice3, choice4);
+
+					
+			
+
+					//logging the data
+					// console.log('quote: ' + quoteElement.quote);
+					console.log('character: ' + quoteElement.character);
+					// console.log('quote character data: ' + quoteData);
+
+					paraEle.appendChild(hintEle);
+					let arr = [];
+
+					randomGen = () => {
+						for (let choices = [ 0, 1, 2, 3 ], i = options.length; i--; ) {
+							let randomNum = choices.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
+							arr.push(randomNum);
+						}
+						return arr;
+					};
+
+					randomGen();
+
+					let randomNumArr = arr;
+					console.log(quoteData);
+					// for (let i = 0; i <= options.length; i++) {
+					options[[ randomNumArr[0] ]].textContent = quoteData[0];
+					options[[ randomNumArr[1] ]].textContent = quoteData[1];
+					options[[ randomNumArr[2] ]].textContent = quoteData[2];
+					options[[ randomNumArr[3] ]].textContent = quoteData[3];
+
+					for (let i = 0; i < options.length; i++) {
+						options[i].addEventListener('click', function() {
+							if (options[i].textContent == quoteElement.character) {
+								console.log('right');
+								options[i].style.backgroundColor = 'green';
+								options[i].style.color = 'white';
+								for (let j = 0; j < options.length; j++) {
+									options[j].disabled = true;
+								}
+							} else {
+								options[i].style.backgroundColor = 'red';
+								options[i].style.color = 'white';
+								for (let j = 0; j < options.length; j++) {
+									options[j].disabled = true;
+								}
+							}
+						});
+					}
+				
 		}
 	};
 

@@ -41,7 +41,6 @@ let modalBtn = document.getElementById('closeBt');
 
 
 
-
 let answer = document.getElementsByClassName('answer');
 let menu = document.getElementById('animeMainMenu');
 
@@ -146,7 +145,7 @@ if (animeParentDiv) {
 					}
 				});
 			}
-		}
+		} 
 	};
 
 	createAnimeGame();
@@ -176,4 +175,4 @@ if (animeParentDiv) {
 			nextPageBtn[0].disabled = true; 
 		}
 	});
-}
+} 

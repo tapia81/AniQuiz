@@ -44,6 +44,7 @@ Navbar styling
 .navbar-item:hover {
 	background-color: var(--white) !important;
 	color: var(--rubyRed) !important;
+	
 }
 
 .navbar-burger:hover {
@@ -54,6 +55,7 @@ Navbar styling
 .navbar-link {
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
+
 }
 
 .navbar-item img {
