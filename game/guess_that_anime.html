@@ -46,8 +46,10 @@
 <div class="model-box">
   <div class="model-content">
     <div class="model-text">
-      <p>Correct or Wrong</p>
     </div>
+    <div class="answer">
+    </div>
+    <button id="closeBt" class="modal-close is-large" aria-label="close"></button>
   </div>
 </div>
 
@@ -64,9 +66,6 @@
   
   <div class="columns centerColumn">
     <div class="column" id='animeColumn'>
-      <div id="picture">
-        
-      </div>
       <p class="animePicture" id="animeAPI">What anime is pictured in the image below?</p>
     </div>
   </div>
@@ -82,9 +81,8 @@
   
   <div class="columns centerColumn">
     <div class="column">
-      <button class="button modeBtn previousQuestion">Previous question</button>
       <button class="button modeBtn nextQuestion">Next question</button>
-      <button class="button modeBtn mainMenu">Return to main menu</button>
+      <button class="button modeBtn mainMenu" id="animeMainMenu">Return to main menu</button>
     </div>
   </div>
   

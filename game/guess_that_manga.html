@@ -43,21 +43,28 @@
 
   </div>
 </nav>
+
+<div class="model-box">
+  <div class="model-content">
+    <div class="model-text">
+    </div>
+    <div class="answer">
+    </div>
+    <button id="closeBt" class="modal-close is-large" aria-label="close"></button>
+  </div>
+</div>
 <div class="mainContainer">
   <h1 class="gameTitle">Mode Selected </h1>
 
   <div class="columns centerColumn">
     <div class="column">
-        <button class="button modeBtn" id="guessMangaSelection">Guess that Manga</button>
+        <button class="button" id="guessMangaSelection">Guess that Manga</button>
     </div>
 
   </div>
 
   <div class="columns centerColumn">
     <div class="column" id='mangaColumn'>
-      <!-- <div id="picture">
-        
-      </div> -->
     
       <p class="mangaPicture" id="mangaAPI">What manga is pictured in the image below?</p>
     </div>
@@ -75,12 +82,21 @@
   <div class="columns centerColumn">
     <div class="column">
       <button class="button modeBtn nextQuestion">Next question</button>
-      <button class="button modeBtn mainMenu">Return to main menu</button>
+      <button id="mangaMainMenu" class="button modeBtn mainMenu">Return to main menu</button>
   </div>
 </div>
 </div>
 
+<!-- /* Modal Section */  -->
 
-    <!-- <script type="module" src="/script.js"></script> -->
+<div class="modal ">
+  <div class="modal-background"></div>
+  <div id="modalContent" class="modal-content has-background-white py-5 px-5">
+  </div>
+  <button id="closeBt" class="modal-close is-large" aria-label="close"></button>
+</div>
+
+
+    <script type="module" src="/script.js"></script>
 </body>
 </html>

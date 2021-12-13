@@ -162,7 +162,7 @@ Start Game
 */
 
 .gameTitle {
-	font-size: 3em;
+	font-size: 3rem;
 	font-weight: bold;
 	text-align: center;
 }
@@ -179,8 +179,8 @@ Start Game
 	display: none;
 }
 
-#picture {
-	height: 400px;
+#animeColumn img {
+	height: 40vh;
 }
 
 .model-box {
@@ -200,11 +200,11 @@ Start Game
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	position: absolute;
-	gap: 10%;
 	background-color: white;
-	height: 50vh;
-	width: 50vw;
+	height: 25vh;
+	width: 70vw;
+	gap: 5%;
+	margin-bottom: 30%;
 	color: black;
 	border-color: black;
 	border-style: solid;
@@ -212,22 +212,25 @@ Start Game
 	z-index: 2;
 }
 
-.model-content #close-button {
-	font-size: 2em;
-	width: 1em;
-	height: 0em;
-	cursor: pointer;
-}
-
 .model-text {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 80%;
-	width: 70%;
+	height: 5vh;
+	width: 100%;
+	padding: 5%;
 }
-/*
 
-Dynamic guess that quote page
+.answer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	height: 5vh;
+	width: 70%;
+	z-index: 3;
+}
 
-*/
+.modal-close {
+	background-color: rgba(0, 0, 0, 0.5);
+}

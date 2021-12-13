@@ -11,19 +11,19 @@ $(document).ready(function() {
 	});
 });
 
-let currentImage = document.getElementsByClassName('slideshow-image');
-let imageBox = document.getElementsByClassName('slideshow-box');
-let k = 0;
-currentImage[k].style.display = 'flex';
-imageBox[k].addEventListener('click', function() {
-	k += 1;
-	if (k >= currentImage.length) {
-		k = 0;
-	}
+// let currentImage = document.getElementsByClassName('slideshow-image');
+// let imageBox = document.getElementsByClassName('slideshow-box');
+// let k = 0;
+// currentImage[k].style.display = 'flex';
+// imageBox[k].addEventListener('click', function() {
+// 	k += 1;
+// 	if (k >= currentImage.length) {
+// 		k = 0;
+// 	}
 
-	currentImage[k].style.display = 'flex';
-	if (k == 0) {
-		currentImage[currentImage.length - 1].style.display = 'none';
-	}
-	currentImage[k - 1].style.display = 'none';
-});
+// 	currentImage[k].style.display = 'flex';
+// 	if (k == 0) {
+// 		currentImage[currentImage.length - 1].style.display = 'none';
+// 	}
+// 	currentImage[k - 1].style.display = 'none';
+// });
