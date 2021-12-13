@@ -89,6 +89,7 @@ about/index.html styling
 .contactSection {
 	display: flex;
 	justify-content: center;
+	margin-bottom:15px;
 }
 
 .logoStyle {
@@ -107,16 +108,19 @@ about/index.html styling
 }
 
 .gamingGif {
-	display: flex;
-	/* margin: 0 auto; */
-	margin-top: 10px; 
+	margin-top: 20px;
+	border: 1px solid; 
 }
 
 .about {
-	border: 2px solid;
+	border: 1px solid;
 	width: 54%;
 	display: flex;
 	margin: 0 auto; 
+	background-color: var(--cultured); 
+	-webkit-box-shadow: 2px 3px 9px 5px rgba(0, 0, 0, 0.472); 
+	box-shadow: 2px 3px 9px 5px rgba(0,0,0,0.472);
+
 }
 
 .gif {
