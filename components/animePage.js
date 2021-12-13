@@ -39,9 +39,6 @@ let modelBox = document.getElementsByClassName('model-box');
 let modelText = document.getElementsByClassName('model-text');
 let modalBtn = document.getElementById('closeBt');
 
-//Modal starts invisible
-modelBox[0].style.display = 'none';
-
 
 
 
@@ -158,7 +155,7 @@ if (animeParentDiv) {
 
 	let i = 1;
 	console.log(`Question ${i}`);
-	
+	modelBox[0].style.display = 'none';
 
 	nextPageBtn[0].addEventListener('click', function() {
 		i += 1;

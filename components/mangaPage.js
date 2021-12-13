@@ -54,8 +54,7 @@ if (mangaParentDiv) {
 		document.body.style.top = '';
 		
 	});
-	//Modal initially starts as invisible
-	modelBox[0].style.display = 'none';
+
 
 	const returnMenu = () => {
 		menu.addEventListener('click', function() {
@@ -132,7 +131,7 @@ if (mangaParentDiv) {
 
 	let i = 1;
 	console.log(`Question ${i}`);
-
+	modelBox[0].style.display = 'none';
 	nextPageBtn[0].addEventListener('click', function() {
 		i += 1;
 		if (i < 11) {
