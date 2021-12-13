@@ -17,10 +17,16 @@ let rand1 = Math.floor(Math.random() * 50);
 let rand2 = Math.floor(Math.random() * 50);
 let rand3 = Math.floor(Math.random() * 50);
 let rand4 = Math.floor(Math.random() * 50);
+
+
 const animeParentDiv = document.getElementById('animeColumn');
 const animeImg = document.createElement('img');
+
+
 let storedData = [];
 let storedButtonOrder = [];
+
+
 let nextPageBtn = document.getElementsByClassName('nextQuestion');
 let exitModelBox = document.getElementsByClassName('model-box');
 let modelText = document.getElementsByClassName('model-text');
@@ -76,6 +82,7 @@ if (animeParentDiv) {
 			let randomNumArr = arr;
 			storedButtonOrder.push(randomNumArr);
 			console.log(storedButtonOrder);
+
 			options[[ randomNumArr[0] ]].textContent = `${imgData.top[rand1].title}`;
 			options[[ randomNumArr[1] ]].textContent = `${imgData.top[rand2].title}`;
 			options[[ randomNumArr[2] ]].textContent = `${imgData.top[rand3].title}`;
@@ -87,18 +94,23 @@ if (animeParentDiv) {
 					if (options[i].textContent == imgData.top[rand1].title) {
 						modelText[0].textContent = `Congrats! You choose the correct answer. Your answer was:`;
 						answer[0].textContent = `${imgData.top[rand1].title}`;
+						
 						answer[0].style.backgroundColor = 'green';
 						options[i].style.backgroundColor = 'green';
 						options[i].style.color = 'white';
+
 						for (let j = 0; j < options.length; j++) {
 							options[j].disabled = true;
 						}
+
 					} else {
 						modelText[0].textContent = `Sorry, You chose the wrong answer! The correct answer should have been:`;
 						answer[0].textContent = `${imgData.top[rand1].title}`;
+
 						answer[0].style.backgroundColor = 'red';
 						options[i].style.backgroundColor = 'red';
 						options[i].style.color = 'white';
+
 						for (let j = 0; j < options.length; j++) {
 							options[j].disabled = true;
 						}
@@ -131,6 +143,7 @@ if (animeParentDiv) {
 			}
 		} else {
 			console.log('stop game');
+			nextPageBtn[0].disabled = true; 
 		}
 	});
 }

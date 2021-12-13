@@ -131,6 +131,7 @@ if (mangaParentDiv) {
 			}
 		} else {
 			console.log('stop game');
+			nextPageBtn[0].disabled = true; 
 		}
 	});
 }
