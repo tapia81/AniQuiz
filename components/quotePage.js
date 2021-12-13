@@ -134,11 +134,22 @@ if (parentP) {
 
 	createQuote();
 
+	const clearPage = () => {
+
+
+		while (parentP.firstChild) {
+			parentP.firstChild.remove();
+			createQuote();
+		}
+
+	}
+
 	let nextPageBtn = document.getElementsByClassName('nextQuestion');
 	console.log(nextPageBtn);
 	nextPageBtn[0].addEventListener('click', function() {
 		console.log('next click');
 		createQuote();
+		clearPage(); 
 		for (let j = 0; j < options.length; j++) {
 			options[j].disabled = false;
 			options[j].style.backgroundColor = 'white';
@@ -146,3 +157,4 @@ if (parentP) {
 		}
 	});
 }
+

@@ -41,7 +41,7 @@ Navbar styling
 
 .navbar-item:hover {
 	background-color: var(--white) !important;
-	color: var(--richBlack) !important;
+	color: var(--rubyRed) !important;
 }
 
 .navbar-burger:hover {
@@ -64,6 +64,10 @@ about/index.html styling
 
 */
 
+.aboutSection {
+	text-align: center;
+}
+
 .aboutTitle {
 	font-size: 4em;
 	font-weight: bold;
@@ -73,8 +77,8 @@ about/index.html styling
 	margin-top: 10px;
 	display: flex;
 	flex-wrap: wrap;
-	border: 1px solid;
-	padding: 5px 20px 5px 20px;
+
+	padding: 5px 40px 5px 40px;
 }
 
 .secondaryTitle {
@@ -84,6 +88,7 @@ about/index.html styling
 
 .contactSection {
 	display: flex;
+	justify-content: center;
 }
 
 .logoStyle {
@@ -100,6 +105,37 @@ about/index.html styling
 	width: auto;
 	height: 100px;
 }
+
+.gamingGif {
+	display: flex;
+	/* margin: 0 auto; */
+	margin-top: 10px; 
+}
+
+.about {
+	border: 2px solid;
+	width: 54%;
+	display: flex;
+	margin: 0 auto; 
+}
+
+.gif {
+	display: flex;
+	justify-content: center; 
+}
+
+.about a {
+	margin: 0 auto;
+	color: var( --richBlack);
+
+}
+
+.about a:hover {
+	color: var(--rubyRed);
+}
+
+
+
 
 /*
 How to play styling
@@ -181,6 +217,7 @@ Start Game
 
 #animeColumn img {
 	height: 40vh;
+	border: 2px solid;
 }
 
 /*
@@ -242,3 +279,14 @@ Modal styling
 	top: 180px !important; 
 	right: 20px !important; 
 }
+
+/* 
+Component JS pages
+*/
+
+#animeAPI, #mangaAPI {
+	margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
