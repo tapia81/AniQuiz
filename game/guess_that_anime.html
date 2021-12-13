@@ -45,44 +45,49 @@
 
   </div>
 </nav>
-<div class="mainContainer">
-  <h1 class="gameTitle">Mode Selected </h1>
-  <div class="columns centerColumn">
-    <div class="column">
-      <button class="button modeBtn" id="guessAnimeSelection">Guess that Anime</button>
+<div class="model-box">
+  <div class="model-content">
+    <div class="model-text">
+    </div>
+    <div class="answer">
+    </div>
+    <button id="closeBt" class="modal-close is-large" aria-label="close"></button>
+  </div>
+</div>
+
+
+  <div class="mainContainer">
+    <h1 class="gameTitle">Mode Selected </h1>
+    <div class="columns centerColumn">
+      <div class="column">
+        <button class="button modeBtn" id="guessAnimeSelection">Guess that Anime</button>
+      </div>
     </div>
   </div>
-</div>
-
-
-<div class="columns centerColumn">
-  <div class="column" id='animeColumn'>
-    <p class="animePicture" id="animeAPI">What anime is pictured in the image below?</p>
+  
+  
+  <div class="columns centerColumn">
+    <div class="column" id='animeColumn'>
+      <p class="animePicture" id="animeAPI">What anime is pictured in the image below?</p>
+    </div>
   </div>
-</div>
-
-<div class="columns centerColumn">
-  <div class="column">
-    <button class="button modeBtn" data-target="modal1" id="animeChoice1">Choice1</button>
-
-    <button class="button modeBtn"  data-target="modal1"id="animeChoice2">Choice2</button>
-
-    <button class=" button modeBtn" data-target="modal1" id="animeChoice3">Choice3</button>
-
-    <button class="button modeBtn" data-target="modal1" id="animeChoice4">Choice4</button>
+  
+  <div class="columns centerColumn">
+    <div class="column">
+      <button class="button modeBtn" id="animeChoice1">Choice1</button>
+      <button class="button modeBtn" id="animeChoice2">Choice2</button>
+      <button class="button modeBtn" id="animeChoice3">Choice3</button>
+      <button class="button modeBtn" id="animeChoice4">Choice4</button>
+    </div>
   </div>
-</div>
-
-<div class="columns centerColumn">
-  <div class="column">
-    <button class="button modeBtn" id="nextQuestion">Next question</button>
-    <button class="button modeBtn" id="mainMenu">Return to main menu</button>
-</div>
-</div>
-
-<!-- /* Modal Section */  -->
-
-
-    <script type="module" src="/script.js"></script>
+  
+  <div class="columns centerColumn">
+    <div class="column">
+      <button class="button modeBtn nextQuestion">Next question</button>
+      <button class="button modeBtn mainMenu" id="animeMainMenu">Return to main menu</button>
+    </div>
+  </div>
+  
+  <script type="module" src="/script.js"></script>
 </body>
 </html>
