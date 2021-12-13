@@ -234,7 +234,9 @@ Start Game
 
 .modeTitle {
 	margin-top: 100px;
+	
 }
+
 
 .gameBtns {
 	margin-top: 20px;
@@ -268,7 +270,7 @@ Modal styling
 	margin-bottom: 30%;
 	color: black;
 	border-color: black;
-	border-style: solid;
+	border: 2px solid; 
 	border-width: 4px;
 	z-index: 2;
 
@@ -281,6 +283,7 @@ Modal styling
 	height: 5vh;
 	width: 100%;
 	padding: 5%;
+	font-size: 20px; 
 }
 
 .answer {
