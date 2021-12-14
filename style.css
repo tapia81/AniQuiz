@@ -157,6 +157,7 @@ How to play styling
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
+	margin-bottom: 20px;
 }
 
 .body-content {
