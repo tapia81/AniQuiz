@@ -10,17 +10,13 @@ export const guessMangaPage = () => {
 
 guessMangaBtn && guessMangaBtn.addEventListener('click', guessMangaPage);
 
-let buttonDiv = document.getElementsByClassName('column');
-let options = buttonDiv[2].getElementsByClassName('modeBtn');
-
 let rand1 = Math.floor(Math.random() * 50);
 let rand2 = Math.floor(Math.random() * 50);
 let rand3 = Math.floor(Math.random() * 50);
 let rand4 = Math.floor(Math.random() * 50);
 
-//this cycles through 25 pages of top manga. 
-let randomizeManga = Math.floor(Math.random() * 25); 
-
+//this cycles through 25 pages of top manga.
+let randomizeManga = Math.floor(Math.random() * 25);
 
 const mangaParentDiv = document.getElementById('mangaColumn');
 const mangaImg = document.createElement('img');
@@ -36,6 +32,8 @@ let answer = document.getElementsByClassName('answer');
 let menu = document.getElementById('mangaMainMenu');
 
 if (mangaParentDiv) {
+	let buttonDiv = document.getElementsByClassName('column');
+	let options = buttonDiv[2].getElementsByClassName('modeBtn');
 	mangaParentDiv.appendChild(mangaImg);
 	const getMangaImg = async () => {
 		// return data;
@@ -52,9 +50,7 @@ if (mangaParentDiv) {
 		modelBox[0].style.display = 'none';
 		document.body.style.position = '';
 		document.body.style.top = '';
-		
 	});
-
 
 	const returnMenu = () => {
 		menu.addEventListener('click', function() {
@@ -63,15 +59,13 @@ if (mangaParentDiv) {
 	};
 
 	const createMangaGame = async () => {
-		let load = document.getElementById('loading'); 
+		let load = document.getElementById('loading');
 		if (mangaParentDiv) {
 			returnMenu();
 
-			if (storedData.length === 0 ) {
-				load.style.display = 'block'
-	
+			if (storedData.length === 0) {
+				load.style.display = 'block';
 			}
-
 
 			const imgData = await getMangaImg();
 
@@ -79,10 +73,8 @@ if (mangaParentDiv) {
 			storedData.push(selected);
 			mangaImg.src = selected.image_url;
 
-			
-			if (storedData.length > 0 ) {
+			if (storedData.length > 0) {
 				load.style.display = 'none';
-		
 			}
 
 			//manga button choice randomizer section
@@ -113,7 +105,6 @@ if (mangaParentDiv) {
 					//stops the page from scrolling when the modal box appears
 					document.body.style.position = 'fixed';
 					document.body.style.top = `-${window.scrollY}px`;
-
 
 					if (options[i].textContent == imgData.top[rand1].title) {
 						modelText[0].textContent = `Congrats! You choose the correct answer. Your answer was:`;
@@ -162,7 +153,7 @@ if (mangaParentDiv) {
 			}
 		} else {
 			console.log('stop game');
-			nextPageBtn[0].disabled = true; 
+			nextPageBtn[0].disabled = true;
 		}
 	});
 }

@@ -44,7 +44,6 @@ Navbar styling
 .navbar-item:hover {
 	background-color: var(--white) !important;
 	color: var(--rubyRed) !important;
-	
 }
 
 .navbar-burger:hover {
@@ -55,7 +54,6 @@ Navbar styling
 .navbar-link {
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
-
 }
 
 .navbar-item img {
@@ -93,7 +91,7 @@ about/index.html styling
 .contactSection {
 	display: flex;
 	justify-content: center;
-	margin-bottom:15px;
+	margin-bottom: 15px;
 }
 
 .logoStyle {
@@ -113,37 +111,32 @@ about/index.html styling
 
 .gamingGif {
 	margin-top: 20px;
-	border: 1px solid; 
+	border: 1px solid;
 }
 
 .about {
 	border: 1px solid;
 	width: 54%;
 	display: flex;
-	margin: 0 auto; 
-	background-color: var(--cultured); 
-	-webkit-box-shadow: 2px 3px 9px 5px rgba(0, 0, 0, 0.472); 
-	box-shadow: 2px 3px 9px 5px rgba(0,0,0,0.472);
-
+	margin: 0 auto;
+	background-color: var(--cultured);
+	-webkit-box-shadow: 2px 3px 9px 5px rgba(0, 0, 0, 0.472);
+	box-shadow: 2px 3px 9px 5px rgba(0, 0, 0, 0.472);
 }
 
 .gif {
 	display: flex;
-	justify-content: center; 
+	justify-content: center;
 }
 
 .about a {
 	margin: 0 auto;
-	color: var( --richBlack);
-
+	color: var(--richBlack);
 }
 
 .about a:hover {
 	color: var(--rubyRed);
 }
-
-
-
 
 /*
 How to play styling
@@ -152,57 +145,79 @@ How to play styling
 .playContainer {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	width: 100vw;
 }
+
+.body-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/* background-color: green; */
+	width: 100vw;
+	align-items: center;
+	gap: 5%;
+	contain: content;
+	overflow: hidden;
+}
+
 .game-rules-box {
 	height: 80vh;
-	width: 40vw;
+	width: 45vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: top;
 	align-items: left;
+	border-style: solid;
+	border-color: black;
+	background-color: white;
+	box-shadow: 2px 3px 9px 5px rgba(0, 0, 0, 0.472);
 	margin-top: 8%;
+	padding-left: 2%;
+	padding-right: 2%;
+	font-size: 2.5vh;
 }
 
-.game-rules-content {
-	display: inherit;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 40vw;
+.game-rules-box p {
+	margin-top: 5%;
 }
-.game-rules-content h2 {
-	font-size: 4em;
+
+.game-rules-box h2 {
+	text-align: center;
+	font-size: 5vh;
 	font-weight: bold;
 }
 
 .slideshow-box {
 	height: 80vh;
-	width: 50vw;
+	width: 45vw;
 	margin-top: 8%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: none;
+	border-style: solid;
+	border-color: black;
+	box-shadow: 2px 3px 9px 5px rgba(0, 0, 0, 0.472);
+	contain: content;
+}
+
+.slideshow-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	contain: content;
 }
 
 .slideshow-image {
 	width: 100%;
-	height: 600px;
+	height: 80vh;
+	display: none;
 }
 
 .slideshow-image:hover {
 	cursor: pointer;
-}
-
-.hiddenImage {
-	display: none;
-}
-.body-content {
-	/* display: flex;
-	flex-direction: row;
-	justify-content: center; */
-	align-items: center;
-	gap: 3%;
 }
 
 /*
@@ -229,14 +244,15 @@ Start Game
 
 #animeColumn img {
 	height: 40vh;
-	/* border: 2px solid; */
+}
+
+#mangaColumn img {
+	height: 40vh;
 }
 
 .modeTitle {
 	margin-top: 100px;
-	
 }
-
 
 .gameBtns {
 	margin-top: 20px;
@@ -270,10 +286,9 @@ Modal styling
 	margin-bottom: 30%;
 	color: black;
 	border-color: black;
-	border: 2px solid; 
+	border-style: solid;
 	border-width: 4px;
 	z-index: 2;
-
 }
 
 .model-text {
@@ -283,7 +298,6 @@ Modal styling
 	height: 5vh;
 	width: 100%;
 	padding: 5%;
-	font-size: 20px; 
 }
 
 .answer {
@@ -297,19 +311,18 @@ Modal styling
 }
 
 .modal-close {
-
 	background-color: rgba(0, 0, 0, 0.5);
-	top: 180px !important; 
-	right: 20px !important; 
+	top: 180px !important;
+	right: 20px !important;
 }
 
 /* 
 Component JS pages
 */
 
-#animeAPI, #mangaAPI {
+#animeAPI,
+#mangaAPI {
 	margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: bold;
+	font-size: 20px;
+	font-weight: bold;
 }
-
