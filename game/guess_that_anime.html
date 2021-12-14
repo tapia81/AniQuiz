@@ -60,39 +60,42 @@
 
 
   <div class="mainContainer">
-    <h1 class="gameTitle">Mode Selected </h1>
+
+      <h1 class="gameTitle">Mode Selected </h1>
+      <div class="columns centerColumn">
+        <div class="column">
+          <button class="button modeBtn" id="guessAnimeSelection">Guess that Anime</button>
+        </div>
+      </div>
+   
+  
+  
+    <div class="columns centerColumn">
+      <div class="column" id='animeColumn'>
+        <p class="animePicture" id="animeAPI">What anime is pictured in the image below?</p>
+        <div id="loading">
+          <progress class="progress" max="100">60%</progress>
+        </div>
+      </div>
+    </div>
+
+  
     <div class="columns centerColumn">
       <div class="column">
-        <button class="button modeBtn" id="guessAnimeSelection">Guess that Anime</button>
+        <button class="button modeBtn" id="animeChoice1">Choice1</button>
+        <button class="button modeBtn" id="animeChoice2">Choice2</button>
+        <button class="button modeBtn" id="animeChoice3">Choice3</button>
+        <button class="button modeBtn" id="animeChoice4">Choice4</button>
       </div>
     </div>
-  </div>
-  
-  
-  <div class="columns centerColumn">
-    <div class="column" id='animeColumn'>
-      <p class="animePicture" id="animeAPI">What anime is pictured in the image below?</p>
-      <div id="loading">
-        <progress class="progress" max="100">60%</progress>
+    
+    <div class="columns centerColumn">
+      <div class="column">
+        <button class="button modeBtn nextQuestion">Next question</button>
+        <button class="button modeBtn mainMenu" id="animeMainMenu">Return to main menu</button>
       </div>
     </div>
-  </div>
-  
-  <div class="columns centerColumn">
-    <div class="column">
-      <button class="button modeBtn" id="animeChoice1">Choice1</button>
-      <button class="button modeBtn" id="animeChoice2">Choice2</button>
-      <button class="button modeBtn" id="animeChoice3">Choice3</button>
-      <button class="button modeBtn" id="animeChoice4">Choice4</button>
-    </div>
-  </div>
-  
-  <div class="columns centerColumn">
-    <div class="column">
-      <button class="button modeBtn nextQuestion">Next question</button>
-      <button class="button modeBtn mainMenu" id="animeMainMenu">Return to main menu</button>
-    </div>
-  </div>
+</div>
 
   
   <script type="module" src="/script.js"></script>

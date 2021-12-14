@@ -14,7 +14,9 @@
 html,
 body {
 	width: 100%;
-	background-color: var(--lightGray);
+	/* background-color: var(--lightGray); */
+	background-image: url("assets/mangapanelbg.jpg");
+	background-repeat: repeat;
 }
 
 /* 
@@ -37,8 +39,10 @@ Navbar styling
 
 .mainContainer {
 	margin: 40px;
-	/* display: flex;
-	justify-content:center;  */
+	border: 1px solid;
+	background-color: #f5f3f4a2;
+	padding: 10px;
+	
 }
 
 .navbar-item:hover {
@@ -68,11 +72,16 @@ about/index.html styling
 
 .aboutSection {
 	text-align: center;
+	border: 1px solid;
+	background-color: #f5f3f4a2;
+	padding: 10px;
+	
 }
 
 .aboutTitle {
 	font-size: 4em;
 	font-weight: bold;
+	color: var(--rubyRed);
 }
 
 .aboutPara {
@@ -86,6 +95,7 @@ about/index.html styling
 .secondaryTitle {
 	font-size: 2em;
 	font-style: oblique;
+	color: var(--rubyRed)
 }
 
 .contactSection {
@@ -223,11 +233,19 @@ How to play styling
 /*
 Start Game
 */
+.startContainer {
+	border: 1px solid;
+	background-color: #f5f3f4a2;
+	padding: 10px;
+	height: 100vh;
+	
 
+}
 .gameTitle {
 	font-size: 3rem;
 	font-weight: bold;
 	text-align: center;
+	color: var(--rubyRed);
 }
 
 .centerColumn {
