@@ -5,9 +5,7 @@
   "author": "anthony <tapiaanthony81@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.24.0",
-    "dotenv": "^10.0.0",
-    "react-scripts": "^4.0.3"
+    "axios": "^0.24.0"
   },
   "devDependencies": {
     "parcel": "^2.0.1"
