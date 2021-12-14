@@ -13,6 +13,7 @@ guessQuoteBtn && guessQuoteBtn.addEventListener('click', guessQuotePage);
 const parentP = document.getElementById('quoteAPI');
 const paraEle = document.createElement('p');
 const hintEle = document.createElement('p');
+paraEle.classList.add('quoteStyling');
 let menu = document.getElementById('quoteMainMenu');
 
 const clearQuote = () => {

@@ -42,7 +42,7 @@ Navbar styling
 	border: 1px solid;
 	background-color: #f5f3f4a2;
 	padding: 10px;
-	
+
 }
 
 .navbar-item:hover {
@@ -343,4 +343,18 @@ Component JS pages
 	margin-bottom: 10px;
 	font-size: 20px;
 	font-weight: bold;
+}
+
+.quoteStyling {
+	font-weight: bold;
+	font-size: 20px;
+
+}
+
+.quoteContainer {
+	margin: 40px;
+	border: 1px solid;
+	background-color: #f5f3f4b7;
+	padding: 10px;
+
 }
