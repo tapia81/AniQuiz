@@ -76,23 +76,21 @@ if (parentP) {
 	};
 
 	returnMenu();
+	let load = document.getElementById('loading');
 
 	const createQuote = async () => {
 		if (parentP) {
-			let load = document.getElementById('loading');
-
 			let quoteData = [];
 
+			console.log(quoteData.length == 0);
 			const quoteElement = await getQuoteData();
 			const choice2 = await getChoice2();
 			const choice3 = await getChoice3();
 			const choice4 = await getChoice4();
 
-			if (quoteData.length === 0) {
-				load.style.display = 'block';
+			if (quoteData !== 0) {
+				load.style.display = 'none';
 			}
-
-			load.style.display = 'none';
 
 			//appending each quote to the who said that quote page.
 			paraEle.textContent = `${quoteElement.quote}.`;
@@ -157,6 +155,8 @@ if (parentP) {
 	nextPageBtn[0].addEventListener('click', function() {
 		// console.log('next click');
 		// console.log('clear');
+		load.style.display = 'block';
+
 		clearQuote();
 		createQuote();
 
