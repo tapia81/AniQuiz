@@ -360,6 +360,6 @@ Component JS pages
 
 }
 
-.modeBtn:hover {
+.modeBtn:hover, .gameB:hover {
 	border:1px solid var(--rubyRed);
 }
