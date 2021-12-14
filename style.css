@@ -349,12 +349,17 @@ Component JS pages
 	font-weight: bold;
 	font-size: 20px;
 
+
 }
 
 .quoteContainer {
 	margin: 40px;
 	border: 1px solid;
-	background-color: #f5f3f4b7;
+	background-color: #f5f3f4e5;
 	padding: 10px;
 
+}
+
+.modeBtn:hover {
+	border:1px solid var(--rubyRed);
 }
