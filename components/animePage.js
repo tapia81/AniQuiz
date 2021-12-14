@@ -156,7 +156,7 @@ if (animeParentDiv) {
 
 	nextPageBtn[0].addEventListener('click', function() {
 		i += 1;
-		if (i < 11) {
+		if (i >9 ) {
 			console.log(`Question ${i}`);
 			rand1 = Math.floor(Math.random() * 50);
 			rand2 = Math.floor(Math.random() * 50);
@@ -171,6 +171,9 @@ if (animeParentDiv) {
 		} else {
 			console.log('stop game');
 			nextPageBtn[0].disabled = true;
+			for (let j = 0; j < options.length; j++) {
+				options[j].disabled = true;
+			}
 		}
 	});
 }
