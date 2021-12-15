@@ -74,6 +74,7 @@ about/index.html styling
 	border: 1px solid;
 	background-color: #f5f3f4ce;
 	padding: 10px;
+	margin-top: 3vh;
 }
 
 .aboutTitle {
@@ -160,7 +161,6 @@ How to play styling
 	border: 1px solid;
 	background-color: #f5f3f4d8;
 	padding: 10px;
-	min-height: 100vh;
 	contain: content;
 	margin-top: 3vh;
 	margin-bottom: 3vh;
