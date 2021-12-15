@@ -1,5 +1,4 @@
-// import mangaPage from '/html/guess_that_manga.html';
-import startGamePage from '/html/start_the_game.html';
+
 import axios from 'axios';
 
 const guessMangaBtn = document.getElementById('guessManga');
@@ -52,16 +51,12 @@ if (mangaParentDiv) {
 		document.body.style.top = '';
 	});
 
-	const returnMenu = () => {
-		menu.addEventListener('click', function() {
-			window.location.href = `${startGamePage}`;
-		});
-	};
+
 
 	const createMangaGame = async () => {
 		let load = document.getElementById('loading');
 		if (mangaParentDiv) {
-			returnMenu();
+		
 
 			if (storedData.length === 0) {
 				load.style.display = 'block';

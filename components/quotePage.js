@@ -1,5 +1,4 @@
-// import quotePage from '/html/guess_that_quote.html';
-import startGamePage from '/html/start_the_game.html';
+
 import axios from 'axios';
 
 const guessQuoteBtn = document.getElementById('guessQuote');
@@ -75,11 +74,7 @@ if (parentP) {
 		}
 	};
 
-	const returnMenu = () => {
-		menu.addEventListener('click', function() {
-			window.location.href = `${startGamePage}`;
-		});
-	};
+
 
 	modalBtn.addEventListener('click', function() {
 		modelBox[0].style.display = 'none';
@@ -89,7 +84,7 @@ if (parentP) {
 		document.body.style.top = '';
 	});
 
-	returnMenu();
+
 	let load = document.getElementById('loading');
 
 	const createQuote = async () => {

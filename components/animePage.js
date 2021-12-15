@@ -1,5 +1,4 @@
-// import animePage from '/html/guess_that_anime.html';
-import startGamePage from '/html/start_the_game.html';
+
 import axios from 'axios';
 
 const guessAnimeBtn = document.getElementById('guessAnime');
@@ -56,17 +55,13 @@ if (animeParentDiv) {
 		document.body.style.top = '';
 	});
 
-	const returnMenu = () => {
-		menu.addEventListener('click', function() {
-			window.location.href = `${startGamePage}`;
-		});
-	};
+
 
 	const createAnimeGame = async () => {
 		let load = document.getElementById('loading');
 
 		if (animeParentDiv) {
-			returnMenu();
+
 
 			if (storedData.length === 0) {
 				load.style.display = 'block';
