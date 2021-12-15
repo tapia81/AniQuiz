@@ -69,6 +69,17 @@ about/index.html styling
 
 */
 
+.subSection {
+	display: flex;
+	flex-direction: column;
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
 .aboutSection {
 	text-align: center;
 	border: 1px solid;
@@ -85,10 +96,20 @@ about/index.html styling
 
 .aboutPara {
 	margin-top: 10px;
-	display: flex;
-	flex-wrap: wrap;
-
+	gap: 20px;
 	padding: 5px 40px 5px 40px;
+	text-align: justify;
+	font-weight: 500;
+}
+
+.midPara {
+	display: flex;
+	font-weight: 500;
+}
+
+.endingPara {
+	padding: 5px 40px 5px 40px;
+	font-weight: 500;
 }
 
 .secondaryTitle {
@@ -125,7 +146,7 @@ about/index.html styling
 
 .about {
 	border: 1px solid;
-	width: 54%;
+	width: 59%;
 	display: flex;
 	margin: 0 auto;
 	background-color: var(--cultured);
@@ -164,6 +185,9 @@ How to play styling
 	contain: content;
 	margin-top: 3vh;
 	margin-bottom: 3vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .howTitle {
@@ -175,10 +199,16 @@ How to play styling
 .howPara {
 	margin-top: 10px;
 	color: var(--richBlack);
-	padding: 5px 40px 5px 40px;
+	padding: 5px 0px 5px 0px;
 	font-size: 18px;
 	font-style: oblique;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	text-align: justify;
+	width: 45vw;
+	gap: 20px;
+	font-weight: bold;
 }
 
 /*
@@ -237,7 +267,7 @@ Modal styling
 	width: 100vw;
 	justify-content: center;
 	align-items: center;
-	
+
 	z-index: 1;
 }
 
