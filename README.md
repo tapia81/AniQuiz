@@ -93,6 +93,8 @@ The mobile adaption of our website works similarily to the desktop application, 
 #### Future functionality that we would like to have: 
 - Points System (Whenever the user gets an answer right, they get one point) 
 - Display Points System (There would be a scoreboard detailing how many points in total they received)
+- Timer for selecting an answer to questions
+- Make the populated anime API photos for Guess that Anime and Guess that Manga more challenging
 
 ## Contributors 💻
 <div align="center">
