@@ -11,7 +11,7 @@
     "parcel": "^2.0.1"
   },
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel html/index.html",
+    "build": "parcel build html/index.html"
   }
 }

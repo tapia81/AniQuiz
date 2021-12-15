@@ -1,5 +1,5 @@
-import quotePage from '/game/guess_that_quote.html';
-import startGamePage from '/start_the_game.html';
+import quotePage from '/html/guess_that_quote.html';
+import startGamePage from '/html/start_the_game.html';
 import axios from 'axios';
 
 const guessQuoteBtn = document.getElementById('guessQuote');

@@ -1,5 +1,5 @@
-import animePage from '/game/guess_that_anime.html';
-import startGamePage from '/start_the_game.html';
+import animePage from '/html/guess_that_anime.html';
+import startGamePage from '/html/start_the_game.html';
 import axios from 'axios';
 
 const guessAnimeBtn = document.getElementById('guessAnime');

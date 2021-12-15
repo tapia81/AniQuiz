@@ -1,5 +1,5 @@
-import mangaPage from '/game/guess_that_manga.html';
-import startGamePage from '/start_the_game.html';
+import mangaPage from '/html/guess_that_manga.html';
+import startGamePage from '/html/start_the_game.html';
 import axios from 'axios';
 
 const guessMangaBtn = document.getElementById('guessManga');
