@@ -1,12 +1,12 @@
-import animePage from '/html/guess_that_anime.html';
+// import animePage from '/html/guess_that_anime.html';
 import startGamePage from '/html/start_the_game.html';
 import axios from 'axios';
 
 const guessAnimeBtn = document.getElementById('guessAnime');
 
-export const guessAnimePage = () => {
-	window.location.href = `${animePage}`;
-};
+// export const guessAnimePage = () => {
+// 	window.location.href = `${animePage}`;
+// };
 
 guessAnimeBtn && guessAnimeBtn.addEventListener('click', guessAnimePage);
 

@@ -262,40 +262,37 @@ Modal styling
 .model-box {
 	background-color: rgba(0, 0, 0, 0.5);
 	display: none;
+	align-items: center;
 	position: absolute;
 	height: 120vh;
 	width: 100vw;
 	justify-content: center;
-	align-items: center;
-
 	z-index: 1;
 }
 
 .model-content {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	background-color: var(--cultured);
-	height: 20vh;
-	width: 50vw;
+	width: 85vw;
+	height: fit-content;
 	gap: 5%;
-	margin-bottom: 30%;
 	color: black;
 	border-color: black;
 	border-style: solid;
 	border-radius: 15px;
 	border-width: 2px;
 	z-index: 2;
+	padding: 10px 5px 15px 5px;
 }
 
 .model-text {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 5vh;
 	width: 100%;
-	padding: 5%;
+	padding: 5px;
 	font-size: 18px;
 }
 
@@ -305,8 +302,9 @@ Modal styling
 	align-items: center;
 	color: white;
 	height: 5vh;
-	width: 70%;
 	z-index: 3;
+	padding: 5px; 
+	font-size: 13px; 
 	border: 1px solid black;
 }
 

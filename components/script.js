@@ -1,6 +1,6 @@
-import { guessAnimePage } from '/components/animePage.js';
-import { guessMangaPage } from '/components/mangaPage.js';
-import { guessQuotePage } from '/components/quotePage.js';
+// import { guessAnimePage } from '/components/animePage.js';
+// import { guessMangaPage } from '/components/mangaPage.js';
+// import { guessQuotePage } from '/components/quotePage.js';
 
 
 $(document).ready(function() {
@@ -13,4 +13,4 @@ $(document).ready(function() {
 });
 
 
-export {guessAnimePage, guessMangaPage, guessQuotePage}
+// export {guessAnimePage, guessMangaPage, guessQuotePage}

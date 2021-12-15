@@ -1,12 +1,12 @@
-import mangaPage from '/html/guess_that_manga.html';
+// import mangaPage from '/html/guess_that_manga.html';
 import startGamePage from '/html/start_the_game.html';
 import axios from 'axios';
 
 const guessMangaBtn = document.getElementById('guessManga');
 
-export const guessMangaPage = () => {
-	window.location.href = `${mangaPage}`;
-};
+// export const guessMangaPage = () => {
+// 	window.location.href = `${mangaPage}`;
+// };
 
 guessMangaBtn && guessMangaBtn.addEventListener('click', guessMangaPage);
 
