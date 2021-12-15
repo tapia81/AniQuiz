@@ -76,7 +76,7 @@ if (mangaParentDiv) {
 
 			let arr = [];
 
-			randomGen = () => {
+			let randomGen = () => {
 				for (let choices = [ 0, 1, 2, 3 ], i = options.length; i--; ) {
 					let randomNum = choices.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
 					arr.push(randomNum);
