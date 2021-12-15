@@ -16,6 +16,12 @@ const hintEle = document.createElement('p');
 paraEle.classList.add('quoteStyling');
 let menu = document.getElementById('quoteMainMenu');
 
+let modelBox = document.getElementsByClassName('model-box');
+let modelText = document.getElementsByClassName('model-text');
+let modalBtn = document.getElementById('closeBt');
+
+let answer = document.getElementsByClassName('answer');
+
 const clearQuote = () => {
 	while (parentP.firstChild) {
 		parentP.firstChild.remove();
@@ -75,6 +81,14 @@ if (parentP) {
 		});
 	};
 
+	modalBtn.addEventListener('click', function() {
+		modelBox[0].style.display = 'none';
+
+		//allows the page to continue scrolling when you exit the modal
+		document.body.style.position = '';
+		document.body.style.top = '';
+	});
+
 	returnMenu();
 	let load = document.getElementById('loading');
 
@@ -129,14 +143,24 @@ if (parentP) {
 
 			for (let i = 0; i < options.length; i++) {
 				options[i].addEventListener('click', function() {
+					modelBox[0].style.display = 'flex';
+
+					//stops the page from scrolling when the modal box appears
+					document.body.style.position = 'fixed';
+					document.body.style.top = `-${window.scrollY}px`;
 					if (options[i].textContent == quoteElement.character) {
-						console.log('right');
+						modelText[0].textContent = `Congrats! You choose the correct answer. Your answer was:`;
+						answer[0].textContent = `${quoteElement.character}`;
+						answer[0].style.backgroundColor = 'green';
 						options[i].style.backgroundColor = 'green';
 						options[i].style.color = 'white';
 						for (let j = 0; j < options.length; j++) {
 							options[j].disabled = true;
 						}
 					} else {
+						modelText[0].textContent = `Sorry, You chose the wrong answer! The correct answer should have been:`;
+						answer[0].textContent = `${quoteElement.character}`;
+						answer[0].style.backgroundColor = 'red';
 						options[i].style.backgroundColor = 'red';
 						options[i].style.color = 'white';
 						for (let j = 0; j < options.length; j++) {
@@ -149,21 +173,28 @@ if (parentP) {
 	};
 
 	createQuote();
-
+	let i = 1;
 	let nextPageBtn = document.getElementsByClassName('nextQuestion');
+	console.log(`Question: ${i}`);
+	modelBox[0].style.display = 'none';
 
 	nextPageBtn[0].addEventListener('click', function() {
-		// console.log('next click');
-		// console.log('clear');
-		load.style.display = 'block';
+		i += 1;
+		console.log(`Question: ${i}`);
 
-		clearQuote();
-		createQuote();
+		if (i <= 10) {
+			load.style.display = 'block';
+			clearQuote();
+			createQuote();
 
-		for (let j = 0; j < options.length; j++) {
-			options[j].disabled = false;
-			options[j].style.backgroundColor = 'white';
-			options[j].style.color = 'black';
+			for (let j = 0; j < options.length; j++) {
+				options[j].disabled = false;
+				options[j].style.backgroundColor = 'white';
+				options[j].style.color = 'black';
+			}
+			if (i == 10) {
+				nextPageBtn[0].disabled = true;
+			}
 		}
 	});
 }

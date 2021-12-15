@@ -42,7 +42,6 @@ Navbar styling
 	border: 1px solid;
 	background-color: #f5f3f4a2;
 	padding: 10px;
-
 }
 
 .navbar-item:hover {
@@ -75,7 +74,6 @@ about/index.html styling
 	border: 1px solid;
 	background-color: #f5f3f4ce;
 	padding: 10px;
-	
 }
 
 .aboutTitle {
@@ -95,7 +93,7 @@ about/index.html styling
 .secondaryTitle {
 	font-size: 2em;
 	font-style: oblique;
-	color: var(--rubyRed)
+	color: var(--rubyRed);
 }
 
 .contactSection {
@@ -153,13 +151,19 @@ How to play styling
 
 */
 
+.videoInstruction video {
+	height: 500px;
+}
 
 .playContainer {
 	text-align: center;
 	border: 1px solid;
 	background-color: #f5f3f4d8;
 	padding: 10px;
-	height: 100vh;
+	min-height: 100vh;
+	contain: content;
+	margin-top: 3vh;
+	margin-bottom: 3vh;
 }
 
 .howTitle {
@@ -175,9 +179,7 @@ How to play styling
 	font-size: 18px;
 	font-style: oblique;
 	margin-bottom: 40px;
-
 }
-
 
 /*
 Start Game
@@ -186,9 +188,7 @@ Start Game
 	border: 1px solid;
 	background-color: #f5f3f4a2;
 	padding: 10px;
-	height: 100vh;
-	
-
+	min-height: 100vh;
 }
 .gameTitle {
 	font-size: 3rem;
@@ -297,8 +297,6 @@ Component JS pages
 .quoteStyling {
 	font-weight: bold;
 	font-size: 20px;
-
-
 }
 
 .quoteContainer {
@@ -306,9 +304,9 @@ Component JS pages
 	border: 1px solid;
 	background-color: #f5f3f4e5;
 	padding: 10px;
-
 }
 
-.modeBtn:hover, .gameB:hover {
-	border:1px solid var(--rubyRed);
+.modeBtn:hover,
+.gameB:hover {
+	border: 1px solid var(--rubyRed);
 }

@@ -139,23 +139,20 @@ if (mangaParentDiv) {
 	modelBox[0].style.display = 'none';
 	nextPageBtn[0].addEventListener('click', function() {
 		i += 1;
-		if (i >9 ) {
+		if (i <= 10) {
 			console.log(`Question ${i}`);
 			rand1 = Math.floor(Math.random() * 50);
 			rand2 = Math.floor(Math.random() * 50);
 			rand3 = Math.floor(Math.random() * 50);
 			rand4 = Math.floor(Math.random() * 50);
-			createAnimeGame();
+			createMangaGame();
 			for (let j = 0; j < options.length; j++) {
 				options[j].disabled = false;
 				options[j].style.backgroundColor = 'white';
 				options[j].style.color = 'black';
 			}
-		} else {
-			console.log('stop game');
-			nextPageBtn[0].disabled = true;
-			for (let j = 0; j < options.length; j++) {
-				options[j].disabled = true;
+			if (i == 10) {
+				nextPageBtn[0].disabled = true;
 			}
 		}
 	});
