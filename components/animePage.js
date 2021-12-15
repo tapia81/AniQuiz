@@ -133,7 +133,7 @@ if (animeParentDiv) {
 						modelText[0].textContent = `Sorry, You chose the wrong answer! The correct answer should have been:`;
 						answer[0].textContent = `${imgData.top[rand1].title}`;
 
-						answer[0].style.backgroundColor = 'red';
+						answer[0].style.backgroundColor = 'green';
 						options[i].style.backgroundColor = 'red';
 						options[i].style.color = 'white';
 
