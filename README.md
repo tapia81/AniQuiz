@@ -40,7 +40,7 @@
 
 ### Roles: 
 
-* Hydeia contributed to this group project as the lead designer. She created the wireframes on desktop, mobile and tablet as well as the sitemap. She also programmed the homepage and a portion of the logic for the actual game pages. 
+* Hydeia contributed to this group project as the lead designer. She created the low-fidelity wireframes on desktop, mobile and tablet as well as the sitemap. She also programmed the homepage and a portion of the logic for the actual game pages. 
 * Anthony contributed to this project as the lead coder. He worked on the logic and development of the anime and manga related game page. 
 
 ## Wireframe on Desktop 🖥️
