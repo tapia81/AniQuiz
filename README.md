@@ -38,6 +38,11 @@
 
 * The purpose/goal of AniQuiz is to test and improve one's knowledge on anime and manga. It's meant to be a fun way to quiz yourself on anime and manga related content. 
 
+### Roles: 
+
+* Hydeia contributed to this group project as the lead designer. She created the wireframes on desktop, mobile and tablet as well as the sitemap. She also programmed the homepage and a portion of the logic for the actual game pages. 
+* Anthony contributed to this project as the lead coder. He worked on the logic and development of the anime and manga related game page. 
+
 ## Wireframe on Desktop 🖥️
 
 #### The page will display an anime background and a navigation bar with links to the about us, learning about the game, and starting the game pages. 
