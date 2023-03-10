@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <title>AniQuiz</title>
+  </head>
+
+  <body>
+    <nav
+      class="navbar has-shadow"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div
+        class="navbar-brand is-flex is-flex-direction-row is-justify-content-center is-align-items-center py-3 column"
+      >
+        <div class="columns is-mobile is-variable is-3">
+          <div class="column">
+            <a class="image ml-6" href="../index.html">
+              <img src="../assets/logos/AniQuiz_Shorter_Logo.png" />
+            </a>
+          </div>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div
+          class="navbar-start is-size-1-desktop is-size-3-mobile is-uppercase has-text-weight-normal"
+        >
+          <a
+            class="navbar-item is-size-5 has-background-white"
+            href="../index.html"
+          >
+            About
+          </a>
+          <a
+            class="navbar-item is-size-5 has-background-white"
+            href="./how-to-play.html"
+          >
+            How To Play
+          </a>
+          <a
+            class="navbar-item is-size-5 has-background-white"
+            href="./start-the-game.html"
+          >
+            Start Game
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="manga-game is-flex is-flex-direction-column is-justify-content-center is-align-items-center mt-5 columns"
+    >
+      <h1
+        class="is-size-2-mobile is-size-1-desktop has-text-centered has-text-weight-bold"
+      >
+        Guess That Manga
+      </h1>
+
+      <p
+        class="is-size-4-mobile is-size-3-desktop has-text-centered has-text-weight-semibold mx-4 question"
+      ></p>
+
+      <h1
+        class="is-size-4-mobile is-size-3-desktop has-text-centered has-text-weight-semibold mx-4 score"
+      ></h1>
+
+      <p
+        class="is-size-4-mobile is-size-3-desktop has-text-centered has-text-weight-semibold mx-4"
+      >
+        What Manga is this image from?
+      </p>
+
+      <img src="" alt="" class="manga-image my-5" />
+
+      <progress class="progress bar" max="100">60%</progress>
+
+      <div class="columns">
+        <div class="column">
+          <button
+            class="button answer-choice js-modal-trigger is-flex is-flex-direction-column is-justify-content-center is-align-items-center is-flex-wrap-wrap"
+            data-target="modal-js-example"
+          >
+            Choice 1
+          </button>
+        </div>
+        <div class="column">
+          <button
+            class="button answer-choice js-modal-trigger is-flex is-flex-direction-column is-justify-content-center is-align-items-center is-flex-wrap-wrap"
+            data-target="modal-js-example"
+          >
+            Choice 2
+          </button>
+        </div>
+        <div class="column">
+          <button
+            class="button answer-choice js-modal-trigger is-flex is-flex-direction-column is-justify-content-center is-align-items-center is-flex-wrap-wrap"
+            data-target="modal-js-example"
+          >
+            Choice 3
+          </button>
+        </div>
+        <div class="column">
+          <button
+            class="button answer-choice js-modal-trigger is-flex is-flex-direction-column is-justify-content-center is-align-items-center is-flex-wrap-wrap"
+            data-target="modal-js-example"
+          >
+            Choice 4
+          </button>
+        </div>
+      </div>
+
+      <nav
+        class="pagination columns my-5"
+        role="navigation"
+        aria-label="pagination"
+      >
+        <div class="column is-half">
+          <a class="pagination-next has-background-white">Next page</a>
+        </div>
+
+        <div class="column is-half">
+          <a
+            class="pagination-previous has-background-white"
+            href="./start-the-game.html"
+            >Quit</a
+          >
+        </div>
+      </nav>
+    </section>
+
+    <div id="modal-js-example" class="modal">
+      <div class="modal-background"></div>
+
+      <div class="modal-content">
+        <div class="box mx-3">
+          <p
+            class="final-score has-text-centered has-text-weight-bold is-size-5-mobile is-size-4-desktop"
+          ></p>
+          <p
+            class="modal-text has-text-centered has-text-weight-bold is-size-5-mobile is-size-4-desktop"
+          ></p>
+          <p
+            class="user-answer has-text-centered is-size-5-mobile is-size-4-desktop"
+          ></p>
+        </div>
+      </div>
+
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <script type="module" src="../scripts/mangaPage.js"></script>
+    <script src="../scripts/navBar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </body>
+</html>

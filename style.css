@@ -1,5 +1,63 @@
-:root {
-	--white: #ffffff;
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  width: 100vw;
+  background-image: url("./assets/mangapanelbg.jpg");
+}
+
+h1,
+h2 {
+  color: #ba181b;
+}
+
+/* ********************************Layout************************************ */
+
+section {
+  min-height: 80vh;
+  max-width: 100vw;
+  contain: content;
+}
+
+/* ********************************Nav************************************ */
+
+nav {
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.navbar-item,
+.navbar-link {
+  letter-spacing: 0.15em;
+}
+
+.navbar-start .navbar-item:hover,
+.navbar-start .navbar-burger:hover {
+  color: #ba181b;
+  font-size: 1rem;
+}
+
+/* ********************************Main************************************ */
+
+.about,
+.how-to-play,
+.game-select,
+.anime-game,
+.manga-game,
+.quote-game {
+  background-color: #f5f3f4ce;
+  /* --white: #ffffff;
 	--cultured: #f5f3f4;
 	--lightGray: #d3d3d3;
 	--silverChalice: #b1a7a6;
@@ -8,336 +66,76 @@
 	--rubyRed: #a4161a;
 	--bloodRed: #660708;
 	--eerieBlack: #161a1d;
-	--richBlack: #0b090a;
+	--richBlack: #0b090a; 
+    f5f3f4a2
+  */
 }
 
-html,
-body {
-	width: 100%;
-	/* background-color: var(--lightGray); */
-	background-image: url("assets/mangapanelbg.jpg");
-	background-repeat: repeat;
+.bio {
+  background-color: #f5f3f4;
+  border: solid black 0.1vw;
 }
 
-/* 
-
-Navbar styling 
-
-*/
-
-.navbar-start {
-	flex-grow: 1;
-	justify-content: center;
-	color: var(--richBlack);
+.guide {
+  background-color: #f5f3f4;
+  border: solid black 0.1vw;
+  font-style: italic;
 }
 
-.navbar {
-	background-color: var(--white);
-	overflow: hidden;
-	border: 1px solid;
+.progress-box {
+  border: solid black 0.1vw;
+  font-style: italic;
+  width: 80vw;
 }
 
-.mainContainer {
-	margin: 40px;
-	border: 1px solid;
-	background-color: #f5f3f4a2;
-	padding: 10px;
+.bar {
+  width: 80%;
 }
 
-.navbar-item:hover {
-	background-color: var(--white) !important;
-	color: var(--rubyRed) !important;
+.answer-choice {
+  width: 70vw;
+  contain: content;
 }
 
-.navbar-burger:hover {
-	background-color: var(--white) !important;
+.pagination a {
+  width: 50vw;
 }
 
-.navbar-item,
-.navbar-link {
-	text-transform: uppercase;
-	letter-spacing: 0.15em;
+@media screen and (min-device-width: 800px) {
+  .about,
+  .how-to-play,
+  .game-select,
+  .anime-game,
+  .manga-game,
+  .quote-game {
+    border: solid black 0.1vw;
+    width: 80vw;
+  }
+
+  .answer-choice {
+    width: 15vw;
+  }
+
+  .pagination {
+    width: 35vw;
+  }
+
+  .pagination a {
+    width: 13vw;
+  }
 }
 
-.navbar-item img {
-	max-height: none;
-}
+@media screen and (min-device-width: 1200px) {
+  .answer-choice {
+    width: 13vw;
+    contain: content;
+  }
 
-/*
+  .pagination {
+    width: 25vw;
+  }
 
-about/index.html styling
-
-*/
-
-.subSection {
-	display: flex;
-	flex-direction: column;
-}
-
-.about {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-}
-
-.aboutSection {
-	text-align: center;
-	border: 1px solid;
-	background-color: #f5f3f4ce;
-	padding: 10px;
-	margin-top: 3vh;
-}
-
-.aboutTitle {
-	font-size: 4em;
-	font-weight: bold;
-	color: var(--rubyRed);
-}
-
-.aboutPara {
-	margin-top: 10px;
-	gap: 20px;
-	padding: 5px 40px 5px 40px;
-	text-align: justify;
-	font-weight: 500;
-}
-
-.midPara {
-	display: flex;
-	font-weight: 500;
-}
-
-.endingPara {
-	padding: 5px 40px 5px 40px;
-	font-weight: 500;
-}
-
-.secondaryTitle {
-	font-size: 2em;
-	font-style: oblique;
-	color: var(--rubyRed);
-}
-
-.contactSection {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 15px;
-}
-
-.logoStyle {
-	margin: 5px;
-	border: 2px solid black;
-}
-
-.resize {
-	width: 100px;
-	height: auto;
-}
-
-.resize {
-	width: auto;
-	height: 100px;
-}
-
-.gamingGif {
-	margin-top: 20px;
-	border: 1px solid;
-}
-
-.about {
-	border: 1px solid;
-	width: 59%;
-	display: flex;
-	margin: 0 auto;
-	background-color: var(--cultured);
-	-webkit-box-shadow: 2px 3px 9px 5px rgba(0, 0, 0, 0.472);
-	box-shadow: 2px 3px 9px 5px rgba(0, 0, 0, 0.472);
-}
-
-.gif {
-	display: flex;
-	justify-content: center;
-}
-
-.about a {
-	margin: 0 auto;
-	color: var(--richBlack);
-}
-
-.about a:hover {
-	color: var(--rubyRed);
-}
-
-/*
-How to play styling
-
-*/
-
-.videoInstruction video {
-	height: 500px;
-}
-
-.playContainer {
-	text-align: center;
-	border: 1px solid;
-	background-color: #f5f3f4d8;
-	padding: 10px;
-	contain: content;
-	margin-top: 3vh;
-	margin-bottom: 3vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.howTitle {
-	font-size: 4em;
-	font-weight: bold;
-	color: var(--rubyRed);
-}
-
-.howPara {
-	margin-top: 10px;
-	color: var(--richBlack);
-	padding: 5px 0px 5px 0px;
-	font-size: 18px;
-	font-style: oblique;
-	margin-bottom: 20px;
-	display: flex;
-	flex-direction: column;
-	text-align: justify;
-	width: 45vw;
-	gap: 20px;
-	font-weight: bold;
-}
-
-/*
-Start Game
-*/
-.startContainer {
-	border: 1px solid;
-	background-color: #f5f3f4a2;
-	padding: 10px;
-	min-height: 100vh;
-}
-.gameTitle {
-	font-size: 3rem;
-	font-weight: bold;
-	text-align: center;
-	color: var(--rubyRed);
-}
-
-.centerColumn {
-	text-align: center;
-}
-
-.modeBtn {
-	margin-top: 20px;
-}
-
-.previousQuestion {
-	display: none;
-}
-
-#animeColumn img {
-	height: 40vh;
-}
-
-#mangaColumn img {
-	height: 40vh;
-}
-
-.modeTitle {
-	margin-top: 100px;
-}
-
-.gameBtns {
-	margin-top: 20px;
-}
-
-/*
-Modal styling
-*/
-
-.model-box {
-	background-color: rgba(0, 0, 0, 0.5);
-	display: none;
-	align-items: center;
-	position: absolute;
-	height: 120vh;
-	width: 100vw;
-	justify-content: center;
-	z-index: 1;
-}
-
-.model-content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: var(--cultured);
-	width: 65vw;
-	height: fit-content;
-	gap: 5%;
-	color: black;
-	border-color: black;
-	border-style: solid;
-	border-radius: 15px;
-	border-width: 2px;
-	z-index: 2;
-	padding: 10px 5px 15px 5px;
-}
-
-.model-text {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding: 5px;
-	font-size: 18px;
-}
-
-.answer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	height: 5vh;
-	width: 50%; 
-	z-index: 3;
-	padding: 5px; 
-	font-size: 13px; 
-	border: 1px solid black;
-}
-
-.modal-close {
-	background-color: rgba(0, 0, 0, 0.5);
-	top: 180px !important;
-	right: 20px !important;
-}
-/* 
-Component JS pages
-*/
-
-#animeAPI,
-#mangaAPI {
-	margin-bottom: 10px;
-	font-size: 20px;
-	font-weight: bold;
-}
-
-.quoteStyling {
-	font-weight: bold;
-	font-size: 20px;
-}
-
-.quoteContainer {
-	margin: 40px;
-	border: 1px solid;
-	background-color: #f5f3f4e5;
-	padding: 10px;
-}
-
-.modeBtn:hover,
-.gameB:hover {
-	border: 1px solid var(--rubyRed);
+  .pagination a {
+    width: 10vw;
+  }
 }

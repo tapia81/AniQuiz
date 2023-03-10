@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>AniQuiz | How To Play</title>
+  </head>
+
+  <body>
+    <nav
+      class="navbar has-shadow"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div
+        class="navbar-brand is-flex is-flex-direction-row is-justify-content-center is-align-items-center py-3 column"
+      >
+        <div class="columns is-mobile is-variable is-3">
+          <div class="column">
+            <a class="image ml-6" href="../index.html">
+              <img src="../assets/logos/AniQuiz_Shorter_Logo.png" />
+            </a>
+          </div>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div
+          class="navbar-start is-size-1-desktop is-size-3-mobile is-uppercase has-text-weight-normal"
+        >
+          <a
+            class="navbar-item is-size-5 has-background-white"
+            href="../index.html"
+          >
+            About
+          </a>
+          <a
+            class="navbar-item is-size-5 has-background-white"
+            href="./how-to-play.html"
+          >
+            How To Play
+          </a>
+          <a
+            class="navbar-item is-size-5 has-background-white"
+            href="./start-the-game.html"
+          >
+            Start Game
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="how-to-play is-flex is-flex-direction-column is-justify-content-center is-align-items-center mt-5 columns"
+    >
+      <h1 class="is-size-1 has-text-centered has-text-weight-bold">
+        How Do I Play?
+      </h1>
+      <div
+        class="guide column is-half has-text-weight-bold is-size-6-mobile is-size-5-desktop has-text-black mt-3 mx-3 box"
+      >
+        <p class="py-3">
+          Step 1: Select One Category between Anime, Manga, or Character Quotes
+        </p>
+        <p>Step 2: Choose between Four Possible Answer Choices</p>
+        <p class="py-3">
+          Step 3: If the Answer Selected is Incorrect, the Answer Will Turn Red
+          and A Screen Will Pop Up Showing the Correct Answer
+        </p>
+        <p class="py-3">
+          Step 4: If the Answer Selected is Correct, the Answer Will Turn Green
+          and A Screen Will Pop Up Congratulating You
+        </p>
+        <p class="py-3">Step 5: Exit the Pop Up Screen</p>
+        <p class="py-3">
+          Step 6: Click on the Next Question Button to Continue
+        </p>
+        <p class="py-3">
+          Step 7: Repeat Steps Two Through Six Until Answering Question Ten
+        </p>
+        <p class="py-3">Step 8: The Game Will End</p>
+        <p class="py-3">
+          <b> Please see the video below for a visual demonstration! </b>
+        </p>
+      </div>
+
+      <div class="my-5 mx-3">
+        <video controls loop autoplay class="video-demonstration">
+          <source src="/assets/instructions.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+    <script src="../scripts/navBar.js"></script>
+  </body>
+</html>

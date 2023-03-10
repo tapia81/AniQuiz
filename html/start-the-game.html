@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>AniQuiz | Game Select</title>
+  </head>
+
+  <body>
+    <nav
+      class="navbar has-shadow"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div
+        class="navbar-brand is-flex is-flex-direction-row is-justify-content-center is-align-items-center py-3 column"
+      >
+        <div class="columns is-mobile is-variable is-3">
+          <div class="column">
+            <a class="image ml-6" href="../index.html">
+              <img src="../assets/logos/AniQuiz_Shorter_Logo.png" />
+            </a>
+          </div>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div
+          class="navbar-start is-size-1-desktop is-size-3-mobile is-uppercase has-text-weight-normal"
+        >
+          <a
+            class="navbar-item is-size-5 has-background-white"
+            href="../index.html"
+          >
+            About
+          </a>
+          <a
+            class="navbar-item is-size-5 has-background-white"
+            href="./how-to-play.html"
+          >
+            How To Play
+          </a>
+          <a
+            class="navbar-item is-size-5 has-background-white"
+            href="./start-the-game.html"
+          >
+            Start Game
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="game-select is-flex is-flex-direction-column is-justify-content-center is-align-items-center mt-5 columns"
+    >
+      <h1 class="is-size-1 has-text-centered has-text-weight-bold">
+        Choose Your Game Mode
+      </h1>
+      <div class="columns mt-5">
+        <a href="./guess-that-anime.html" class="column" id="guessAnime">
+          <p class="button">Guess that Anime</p>
+        </a>
+        <a href="./guess-that-quote.html" class="column">
+          <p class="button">Guess that Quote?</p>
+        </a>
+        <a href="./guess-that-manga.html" class="column">
+          <p class="button">Guess that Manga</p>
+        </a>
+      </div>
+      <div class="my-5 mx-3">
+        <img src="../assets/gaming2.gif" />
+      </div>
+    </section>
+
+    <script src="../scripts/navBar.js"></script>
+  </body>
+</html>
